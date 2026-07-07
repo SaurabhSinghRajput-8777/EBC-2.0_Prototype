@@ -1,0 +1,88 @@
+@config "../../tailwind.config.ts";
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #004A99;
+  --color-primary-light: #1D6FD8;
+  --color-accent: #C8102E;
+  --color-accent-light: #E63946;
+  --color-background: #FAFAFA;
+  --color-surface: #FFFFFF;
+  --color-foreground: #0F172A;
+  --color-muted: #94A3B8;
+  --color-secondary-text: #475569;
+  --color-border: rgba(0,0,0,0.1);
+  
+  --font-heading: var(--font-plus-jakarta);
+  --font-body: var(--font-inter);
+  --font-sans: var(--font-inter);
+  --font-serif: var(--font-plus-jakarta);
+  --font-mono: var(--font-space-mono);
+}
+
+/*
+  The default border color has changed to `currentColor` in Tailwind CSS 4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS 3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
+  
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-plus-jakarta), ui-sans-serif, system-ui, sans-serif;
+  }
+
+  button,
+  [role="button"],
+  a {
+    cursor: pointer;
+  }
+}
+
+@layer utilities {
+  .animate-marquee {
+    animation: marquee 30s linear infinite;
+  }
+  
+  .animate-marquee-slow {
+    animation: marquee 45s linear infinite;
+  }
+  
+  .animate-marquee-fast {
+    animation: marquee 15s linear infinite;
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
