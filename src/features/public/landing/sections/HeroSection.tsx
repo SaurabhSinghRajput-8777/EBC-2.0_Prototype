@@ -12,9 +12,10 @@ import { ArrowRight } from "lucide-react";
 import { TypewriterEffect } from "@/shared/animations/TypewriterEffect";
 
 const HERO_IMAGES = [
-  { src: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80", alt: "EBC Bootcamp Kickoff" },
-  { src: "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&q=80", alt: "Students collaborating" },
-  { src: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80", alt: "Mentorship session" }
+  { src: "/hero/WhatsApp%20Image%202026-07-08%20at%2010.31.54%20AM.jpeg", alt: "EBC Bootcamp Kickoff" },
+  { src: "/hero/WhatsApp%20Image%202026-07-08%20at%2010.31.54%20AM%20(1).jpeg", alt: "Students collaborating" },
+  { src: "/hero/WhatsApp%20Image%202026-07-08%20at%2010.31.54%20AM%20(2).jpeg", alt: "Mentorship session" },
+  { src: "/hero/WhatsApp%20Image%202026-07-08%20at%2010.31.54%20AM%20(3).jpeg", alt: "Bootcamp Team" }
 ];
 
 export function HeroSection() {
