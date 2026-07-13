@@ -62,19 +62,35 @@ export function HeroSection() {
               </p>
             </MotionWrapper>
 
-            <MotionWrapper variant="slideUp" delay={0.4} className="flex flex-col sm:flex-row gap-4">
-              <Link href={siteContent.hero.secondaryCta.href} passHref className="w-full sm:w-auto">
-                <Button size="lg" variant="outline" className="w-full border-primary/20 text-primary hover:bg-primary/5">
-                  {siteContent.hero.secondaryCta.label}
-                </Button>
-              </Link>
-              <Link href={siteContent.hero.primaryCta.href} passHref className="w-full sm:w-auto">
-                <Button size="lg" className="w-full bg-accent hover:bg-accent-light text-white border-transparent">
-                  {siteContent.hero.primaryCta.label}
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
-              </Link>
-            </MotionWrapper>
+            <div className="w-full sm:w-fit flex flex-col">
+              <MotionWrapper variant="slideUp" delay={0.4} className="mb-8 w-full">
+                <div className="bg-surface rounded-2xl border border-primary/10 shadow-sm p-5 flex flex-row w-full">
+                  <div className="flex-1 pr-6">
+                    <span className="block text-sm font-medium text-secondary-text mb-1">Start Date</span>
+                    <span className="block text-lg font-semibold text-foreground">18.08.2026</span>
+                  </div>
+                  <div className="w-px bg-primary/10"></div>
+                  <div className="flex-1 pl-6">
+                    <span className="block text-sm font-medium text-secondary-text mb-1">Ending Date</span>
+                    <span className="block text-lg font-semibold text-foreground">06.10.2026</span>
+                  </div>
+                </div>
+              </MotionWrapper>
+
+              <MotionWrapper variant="slideUp" delay={0.5} className="flex flex-col sm:flex-row gap-4 w-full">
+                <Link href={siteContent.hero.secondaryCta.href} passHref className="w-full sm:w-auto">
+                  <Button size="lg" variant="outline" className="w-full border-primary/20 text-primary hover:bg-primary/5">
+                    {siteContent.hero.secondaryCta.label}
+                  </Button>
+                </Link>
+                <Link href={siteContent.hero.primaryCta.href} passHref className="w-full sm:w-auto">
+                  <Button size="lg" className="w-full bg-accent hover:bg-accent-light text-white border-transparent">
+                    {siteContent.hero.primaryCta.label}
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Button>
+                </Link>
+              </MotionWrapper>
+            </div>
           </div>
 
           {/* Video / Editorial Canvas Area */}
