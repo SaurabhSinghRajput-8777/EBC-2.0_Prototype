@@ -20,5 +20,15 @@ export const ANIMATION_VARIANTS = {
     initial: { opacity: 0, scale: 0.85 },
     animate: { opacity: 1, scale: 1 },
     exit: { opacity: 0, scale: 0.95 },
+  },
+  slideRight: {
+    initial: { opacity: 0, x: -30 },
+    animate: { opacity: 1, x: 0 },
+    exit: { opacity: 0, x: -20 },
+  },
+  slideLeft: {
+    initial: { opacity: 0, x: 30 },
+    animate: { opacity: 1, x: 0 },
+    exit: { opacity: 0, x: 20 },
   }
 };
