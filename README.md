@@ -10,8 +10,9 @@ This project is a modern web application prototype built for the Centre for Inno
 *   **Interactive Team Showcase:** A hierarchical, 3D flip-card interface displaying the Chief Mentor, Core Team, and Supporting Team members with detailed write-ups on hover.
 *   **Dynamic Bootcamp Schedule:** A clearly structured, responsive timeline outlining the program's events and milestones.
 *   **Alumni & Guest Spotlights:** Immersive image grids with carefully tuned gradient overlays to ensure text readability without compromising visual impact.
+*   **Hall of Fame:** A responsive, swipeable carousel showcasing past EBC 1.0 winners with premium watermarked typography and dynamic hover states.
 *   **Fluid Animations:** Seamless scroll-triggered reveals and micro-interactions powered by Framer Motion.
-*   **Fully Responsive:** Optimized for all devices, from mobile phones to ultra-wide desktop monitors.
+*   **Fully Responsive:** Optimized for all devices, featuring swipeable native carousels on mobile and expansive grid layouts on desktop.
 
 ---
 

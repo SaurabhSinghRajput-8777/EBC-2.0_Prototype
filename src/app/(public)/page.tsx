@@ -5,7 +5,7 @@ import { ScheduleSection } from "@/features/public/landing/sections/ScheduleSect
 import { StructureSection } from "@/features/public/landing/sections/StructureSection";
 import { HighlightsSection } from "@/features/public/landing/sections/HighlightsSection";
 import { TeamSection } from "@/features/public/landing/sections/TeamSection";
-import { GallerySection } from "@/features/public/landing/sections/GallerySection";
+import { GallerySection, WinnersSection } from "@/features/public/landing/sections";
 import { AlumniSection } from "@/features/public/landing/sections/AlumniSection";
 import { VisionSection } from "@/features/public/landing/sections/VisionSection";
 import { PublicLayout } from "@/layouts/PublicLayout";
@@ -34,6 +34,7 @@ export default function Home() {
       <HighlightsSection />
       <TeamSection />
       <GallerySection />
+      <WinnersSection />
       <AlumniSection />
       <VisionSection />
     </PublicLayout>

@@ -7,4 +7,5 @@ export * from "./TeamSection";
 export * from "./VisionSection";
 export * from "./AboutSection";
 export * from "./GallerySection";
+export * from "./WinnersSection";
 export * from "./AlumniSection";

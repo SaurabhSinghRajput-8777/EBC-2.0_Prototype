@@ -14,6 +14,7 @@ export const siteContent = {
       inside: [
         { label: "Team", href: "/#team" },
         { label: "Highlights", href: "/#highlights" },
+        { label: "Past Winners", href: "/#winners" },
       ],
       staticLinks: [
         { label: "Demo Day", href: "/demoday" },
@@ -64,17 +65,17 @@ export const siteContent = {
     title: "Bootcamp Schedule",
     subtitle: "Venue - ALH 301, Third Floor, A Block | 6:00 PM - 10:30 PM",
     sessions: [
-      { id: 1, title: "Orientation - Aspiration & Calibration", date: "10 Mar 2026", image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80", description: "Introduction to entrepreneurial mindset, aligning personal aspirations with startup goals, and refining problem statements into actionable ideas." },
-      { id: 2, title: "Customer Discovery (TAM-SAM-SOM)", date: "12 Mar 2026", image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80", description: "Validating ideas through customer research and estimating market potential by defining Total Addressable Market, Serviceable Available Market, and Serviceable Obtainable Market." },
-      { id: 3, title: "Idea Clinic", date: "16 Mar 2026", image: "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&q=80", description: "A guided session to refine startup ideas by clarifying the problem, solution, and value proposition through expert feedback." },
-      { id: 4, title: "Market Sizing", date: "18 Mar 2026", image: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80", description: "Quantitative and qualitative assessment of market opportunity, demand estimation, competitive landscape analysis, and revenue potential forecasting." },
-      { id: 5, title: "Business Modeling", date: "23 Mar 2026", image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80", description: "Exploration of revenue models, unit economics, cost structures, value propositions, and scalability frameworks using tools like Business Model Canvas." },
-      { id: 6, title: "GTM Strategy", date: "26 Mar 2026", image: "https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&q=80", description: "Designing go-to-market plans including customer acquisition channels, pricing strategy, positioning, partnerships, and launch roadmap." },
-      { id: 7, title: "Cofounder & Team Development", date: "01 Apr 2026", image: "https://images.unsplash.com/photo-1522071901873-411886a10004?auto=format&fit=crop&q=80", description: "Understanding founder roles, equity discussions, team dynamics, culture building, hiring strategy, and governance structures for early-stage startups." },
-      { id: 8, title: "Investor Mind, Startup Finance, Fundraising", date: "06 Apr 2026", image: "https://images.unsplash.com/photo-1553729459-efe14ef6055d?auto=format&fit=crop&q=80", description: "Understanding investor expectations, startup valuation basics, financial projections, cap tables, funding stages, and fundraising strategy." },
-      { id: 9, title: "Investment Pitch Preparation", date: "09 Apr 2026", image: "https://images.unsplash.com/photo-1556761175-5973dc0f32f7?auto=format&fit=crop&q=80", description: "Crafting a compelling pitch deck including problem, solution, market, traction, business model, and financials with strong storytelling." },
-      { id: 10, title: "Pitch Delivery", date: "15 Apr 2026", image: "https://images.unsplash.com/photo-1515169067868-5387ec356754?auto=format&fit=crop&q=80", description: "Live pitch simulations, investor Q&A preparation, feedback incorporation, and refining communication clarity and confidence." },
-      { id: 11, title: "Grand Demo Day", date: "22 Apr 2026", image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80", description: "Final showcase event where startups present validated business ideas to investors, mentors, and stakeholders for exposure and potential funding." }
+      { id: 1, title: "Orientation, Ideation, Aspiration & Calibration", date: "18 Aug 2026", image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80", description: "Introduction to entrepreneurial mindset, aligning personal aspirations with startup goals, and refining problem statements into actionable ideas." },
+      { id: 2, title: "Idea Clinic, Customer Discovery (TAM–SAM–SOM)", date: "25 Aug 2026", image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80", description: "Structured validation of ideas through customer interviews, identifying target segments, and defining TAM, SAM and SOM." },
+      { id: 3, title: "Market Sizing", date: "01 Sep 2026", image: "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&q=80", description: "Quantitative and qualitative assessment of market opportunity, demand estimation, competitive landscape analysis, and revenue potential forecasting." },
+      { id: 4, title: "Cofounder & Team Development", date: "08 Sep 2026", image: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80", description: "Understanding founder roles, equity discussions, team dynamics, culture building, hiring strategy, and governance structures for early-stage startups." },
+      { id: 5, title: "Founder's Dating", date: "09 Sep 2026 – 11 Sep 2026", image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80", description: "Finding a co-founder." },
+      { id: 6, title: "GTM Strategy", date: "15 Sep 2026", image: "https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&q=80", description: "Designing go-to-market plans including customer acquisition channels, pricing strategy, positioning, partnerships, and launch roadmap." },
+      { id: 7, title: "Business Models", date: "21 Sep 2026", image: "https://images.unsplash.com/photo-1522071901873-411886a10004?auto=format&fit=crop&q=80", description: "Exploration of revenue models, unit economics, cost structures, value propositions, and scalability frameworks using Business Model Canvas." },
+      { id: 8, title: "MVP", date: "25 Sep 2026", image: "https://images.unsplash.com/photo-1553729459-efe14ef6055d?auto=format&fit=crop&q=80", description: "Developing a Minimum Viable Product to test core assumptions, gather user feedback, iterate quickly, and reduce product-market risk." },
+      { id: 9, title: "Investor Mind, Startup Finance & Fundraising", date: "28 Sep 2026", image: "https://images.unsplash.com/photo-1556761175-5973dc0f32f7?auto=format&fit=crop&q=80", description: "Understanding investor expectations, startup valuation basics, financial projections, cap tables, funding stages, and fundraising strategy." },
+      { id: 10, title: "Investor Pitch Readiness", date: "30 Sep 2026", image: "https://images.unsplash.com/photo-1515169067868-5387ec356754?auto=format&fit=crop&q=80", description: "Live pitch simulations, investor Q&A preparation, feedback incorporation, and refining communication clarity and confidence." },
+      { id: 11, title: "Demo Day", date: "06 Oct 2026", image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80", description: "Final showcase event where startups present validated business ideas to investors, mentors, and stakeholders for exposure and potential funding." }
     ]
   },
   structure: {
@@ -138,6 +139,23 @@ export const siteContent = {
       "/Glimpses till now/otherebc2.JPEG",
       "/Glimpses till now/otherebc3.JPEG",
       "/Glimpses till now/otherebc4.jpeg"
+    ]
+  },
+  winners: {
+    title: "Past Winners of EBC 1.0",
+    description: "The visionary teams who successfully completed our first launchpad and are now building the future.",
+    images: ["/winners/img-1.JPG", "/winners/img-2.JPG"],
+    teams: [
+      { startup: "StepCode", founder: "Aditi Kant" },
+      { startup: "Studio VEDANA", founder: "Hardik Pandey" },
+      { startup: "Creditlens", founder: "Shrestha Hardia" },
+      { startup: "Yoga Flow", founder: "Aditya Singh" },
+      { startup: "Xorian Industries", founder: "Vishal Yadav" },
+      { startup: "Arovave", founder: "Ayush Tiwari" },
+      { startup: "Trawell", founder: "Jayesh Anand" },
+      { startup: "Yuktha", founder: "Sanjay Pavan" },
+      { startup: "Annorth AI", founder: "Dhruv Gupta" },
+      { startup: "House of Nauras", founder: "Nandini Singh" }
     ]
   },
   alumni: {

@@ -7,7 +7,7 @@ export function DatesSection() {
       {/* Subtle background glow */}
       <div className="absolute top-0 left-1/4 w-1/2 h-full bg-gradient-to-r from-transparent via-white/5 to-transparent skew-x-12" />
 
-      <Marquee speed="slow" className="py-2">
+      <Marquee speed="slow" className="py-2" showArrows={false}>
             {siteContent.dates.items.map((stat, i) => (
               <div key={i} className="flex items-center mx-10 shrink-0 group">
                 <span className="text-4xl md:text-5xl lg:text-6xl font-serif text-accent tracking-tight whitespace-nowrap tabular-nums">

@@ -4,76 +4,111 @@ import Link from "next/link";
 import { Container } from "@/shared/ui/Container";
 import Image from "next/image";
 import { siteContent } from "@/constants/siteContent";
+import { Target, Users, Rocket, ArrowRight } from "lucide-react";
 
 export function AboutSection() {
   return (
-    <section id="about" className="relative py-24 md:py-32 bg-background overflow-hidden border-y border-primary/5">
+    <section id="about" className="relative py-20 md:py-32 bg-slate-50/50 overflow-hidden border-y border-slate-200/50">
+      
+      {/* Decorative Blur Backgrounds */}
+      <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
+        <div className="absolute top-[-10%] right-[-5%] w-[500px] h-[500px] rounded-full bg-primary/5 blur-[100px]" />
+        <div className="absolute bottom-[-10%] left-[-10%] w-[600px] h-[600px] rounded-full bg-blue-500/5 blur-[120px]" />
+      </div>
+
       <Container className="relative z-10">
-        <div className="grid lg:grid-cols-2 gap-16 lg:gap-20 items-center">
+        <div className="flex flex-col lg:flex-row gap-10 sm:gap-12 lg:gap-20 items-center">
           
           {/* Left Side: Narrative Content */}
-          <div className="flex flex-col items-start text-left max-w-2xl relative z-20">
+          <div className="flex-1 flex flex-col items-start text-left relative z-20 w-full lg:max-w-[50%]">
             
+            <MotionWrapper variant="slideUp" delay={0.1}>
+              <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-slate-100 border border-slate-200 text-slate-800 text-xs sm:text-sm font-bold tracking-widest uppercase shadow-sm mb-6">
+                <Target className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-accent" />
+                <span>The Objective</span>
+              </div>
+            </MotionWrapper>
+
             <MotionWrapper variant="slideUp" delay={0.2}>
-              <h2 className="text-4xl md:text-5xl font-serif font-bold text-primary mb-6 leading-[1.1] tracking-tight">
+              <h2 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold text-slate-900 mb-6 leading-[1.1] tracking-tight">
                 {siteContent.about.goal.title}
               </h2>
             </MotionWrapper>
             
             <MotionWrapper variant="slideUp" delay={0.3}>
-              <p className="text-lg md:text-xl text-secondary-text mb-12 leading-relaxed font-body font-light">
+              <p className="text-lg sm:text-xl text-slate-600 mb-8 sm:mb-10 leading-relaxed font-medium">
                 {siteContent.about.goal.description}
               </p>
             </MotionWrapper>
 
-            <div className="w-full space-y-6">
-              <MotionWrapper variant="slideUp" delay={0.4}>
-                <div className="p-8 md:p-8 rounded-[20px] bg-surface border border-primary/10 shadow-sm relative overflow-hidden group hover:shadow-md transition-shadow duration-500">
-                  <div className="absolute top-0 left-0 w-1 h-full bg-primary/80"></div>
-                  <h3 className="text-xl font-serif text-primary mb-3">
+            <div className="w-full grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 mb-10">
+              {/* Audience Card */}
+              <MotionWrapper variant="slideUp" delay={0.4} className="h-full">
+                <div className="h-full p-5 sm:p-8 rounded-[20px] sm:rounded-[24px] bg-slate-50 border border-slate-200/60 shadow-sm hover:shadow-lg hover:border-primary/30 transition-all duration-300 group flex flex-col">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4 sm:mb-5 group-hover:scale-110 transition-transform duration-300 shrink-0">
+                    <Users className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
+                  </div>
+                  <h3 className="text-lg sm:text-xl font-bold text-slate-900 mb-2 sm:mb-3">
                     {siteContent.about.audience.title}
                   </h3>
-                  <p className="text-[15px] md:text-base text-secondary-text leading-relaxed font-body">
+                  <p className="text-sm sm:text-base text-slate-600 leading-relaxed flex-1">
                     {siteContent.about.audience.description}
                   </p>
                 </div>
               </MotionWrapper>
 
-              <MotionWrapper variant="slideUp" delay={0.5}>
-                <div className="p-8 md:p-8 rounded-[20px] bg-surface border border-accent/10 shadow-sm relative overflow-hidden group hover:shadow-md transition-shadow duration-500">
-                  <div className="absolute top-0 left-0 w-1 h-full bg-accent/80"></div>
-                  <h3 className="text-xl font-serif text-accent mb-3">
+              {/* Future Card */}
+              <MotionWrapper variant="slideUp" delay={0.5} className="h-full">
+                <div className="h-full p-5 sm:p-8 rounded-[20px] sm:rounded-[24px] bg-slate-50 border border-slate-200/60 shadow-sm hover:shadow-lg hover:border-accent/30 transition-all duration-300 group flex flex-col">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-accent/10 flex items-center justify-center mb-4 sm:mb-5 group-hover:scale-110 transition-transform duration-300 shrink-0">
+                    <Rocket className="w-5 h-5 sm:w-6 sm:h-6 text-accent" />
+                  </div>
+                  <h3 className="text-lg sm:text-xl font-bold text-slate-900 mb-2 sm:mb-3">
                     {siteContent.about.future.title}
                   </h3>
-                  <p className="text-[15px] md:text-base text-secondary-text leading-relaxed font-body">
+                  <p className="text-sm sm:text-base text-slate-600 leading-relaxed flex-1">
                     {siteContent.about.future.description}
                   </p>
                 </div>
               </MotionWrapper>
             </div>
             
-            <MotionWrapper variant="slideUp" delay={0.6} className="mt-12">
-              <Link href="/founder-dating" passHref>
-                <Button size="lg" className="group relative overflow-hidden bg-primary text-white hover:bg-primary/90 px-10 py-6 rounded-xl shadow-sm hover:shadow-md transition-all">
-                  <span className="flex items-center gap-3 text-sm font-medium">
+            <MotionWrapper variant="slideUp" delay={0.6} className="w-full sm:w-auto">
+              <Link href="/founder-dating" passHref className="w-full sm:w-auto">
+                <Button size="lg" className="group relative overflow-hidden bg-slate-900 text-white hover:bg-slate-800 px-6 sm:px-8 py-6 rounded-xl sm:rounded-2xl shadow-xl hover:shadow-2xl transition-all w-full sm:w-auto">
+                  <span className="flex items-center justify-center gap-3 text-sm sm:text-base font-semibold">
                     Find Co-Founders
-                    <svg className="w-4 h-4 transition-transform duration-500 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                    </svg>
+                    <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 transition-transform duration-300 group-hover:translate-x-1" />
                   </span>
                 </Button>
               </Link>
             </MotionWrapper>
           </div>
 
-          {/* Right Side: Image Placeholder */}
-          <div className="relative w-full h-[500px] lg:h-[700px] flex items-center justify-center rounded-[32px] overflow-hidden shadow-lg border border-primary/10">
-            <Image 
-              src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80" 
-              alt="Startup team collaborating" 
-              fill 
-              className="object-cover hover:scale-105 transition-transform duration-1000"
-            />
+          {/* Right Side: Bento Image Canvas */}
+          <div className="flex-1 w-full mt-4 sm:mt-10 lg:mt-0 relative h-[350px] sm:h-[500px] lg:h-[750px] rounded-[24px] sm:rounded-[40px] overflow-hidden shadow-2xl border-[6px] sm:border-8 border-slate-50 group">
+            <MotionWrapper variant="slideUp" delay={0.4} className="w-full h-full">
+              <Image 
+                src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80" 
+                alt="Startup team collaborating" 
+                fill 
+                className="object-cover group-hover:scale-105 transition-transform duration-1000"
+              />
+              <div className="absolute inset-0 bg-gradient-to-tr from-slate-900/60 via-transparent to-transparent mix-blend-multiply"></div>
+              
+              {/* Floating overlay card on the image */}
+              <div className="absolute bottom-6 sm:bottom-10 left-6 sm:left-10 right-6 sm:right-10 bg-white/10 backdrop-blur-xl border border-white/20 p-5 sm:p-8 rounded-[24px] shadow-2xl transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 hidden sm:block">
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 rounded-full bg-accent text-white flex items-center justify-center shrink-0">
+                    <Rocket className="w-6 h-6" />
+                  </div>
+                  <div>
+                    <h4 className="text-white font-bold text-lg">Incubation at Bennett Hatchery</h4>
+                    <p className="text-white/80 text-sm mt-1">The ultimate destination for the best pitches.</p>
+                  </div>
+                </div>
+              </div>
+            </MotionWrapper>
           </div>
 
         </div>
