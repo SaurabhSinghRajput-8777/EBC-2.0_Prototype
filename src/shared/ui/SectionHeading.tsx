@@ -2,8 +2,8 @@ import { BaseProps } from "@/shared/types/common";
 import { cn } from "@/shared/lib/utils";
 
 interface SectionHeadingProps extends BaseProps {
-  title: string;
-  subtitle?: string;
+  title: string | React.ReactNode;
+  subtitle?: string | React.ReactNode;
   align?: "left" | "center";
   titleClassName?: string;
   subtitleClassName?: string;
