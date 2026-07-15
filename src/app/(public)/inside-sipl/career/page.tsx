@@ -1,6 +1,6 @@
 import { PublicLayout } from "@/layouts/PublicLayout";
 import { Container } from "@/shared/ui/Container";
-import { Button } from "@/shared/ui/Button";
+import Link from "next/link";
 import { generateSeoMetadata } from "@/shared/lib/seo";
 
 export const metadata = generateSeoMetadata({
@@ -127,9 +127,14 @@ export default function InsideSiplCareerPage() {
                     />
                   </div>
 
-                  <Button type="button" size="lg" className="mt-2 w-full sm:w-fit">
+                  <Link
+                    href={process.env.NEXT_PUBLIC_APPLY_NOW_LINK || "/apply"}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex h-14 items-center justify-center rounded-[8px] border border-[#001B65] bg-[#001B65] px-8 font-heading text-[15px] font-semibold text-white shadow-[0_14px_34px_rgba(0,27,101,0.16)] transition-colors hover:border-[#D4AF37] hover:bg-[#00164F] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#D4AF37] focus-visible:ring-offset-2 focus-visible:ring-offset-[#F5F8FC] md:px-9 mt-2 w-full sm:w-fit"
+                  >
                     Apply Now
-                  </Button>
+                  </Link>
                 </form>
               </section>
             </div>
