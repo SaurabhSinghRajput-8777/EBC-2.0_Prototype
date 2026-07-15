@@ -13,9 +13,9 @@ export function ScheduleSection() {
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
-    <section id="schedule" className="py-24 md:py-32 lg:py-40 bg-surface">
+    <section id="schedule" className="py-24 md:py-32 lg:py-8 md:py-10 bg-surface">
       <Container>
-        <div className="relative mb-16 md:mb-24 flex flex-col items-center text-center">
+        <div className="relative mb-6 md:mb-8 flex flex-col items-center text-center">
           {/* Decorative background text */}
           <div className="relative z-10">
             <h2 className="font-serif font-bold text-4xl md:text-5xl lg:text-6xl tracking-tight text-[#0A0C10] mb-6 md:mb-8">

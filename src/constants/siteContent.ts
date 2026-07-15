@@ -7,7 +7,7 @@ export const siteContent = {
     logoAlt: "Bennett University EBC Bootcamp Logo",
     navigation: {
       solutions: [
-        { label: "About", href: "/#about" },
+        { label: "Objective", href: "/#about" },
         { label: "Schedule", href: "/#schedule" },
         { label: "Bootcamp", href: "/#bootcamp" },
       ],

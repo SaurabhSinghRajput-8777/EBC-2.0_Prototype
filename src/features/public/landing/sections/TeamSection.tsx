@@ -35,7 +35,7 @@ function TeamCard({ name, position, description, image }: { name: string; positi
 
 export function TeamSection() {
   return (
-    <section id="team" className="relative py-16 md:py-20 bg-primary text-white overflow-hidden border-t border-primary/10">
+    <section id="team" className="relative py-16 md:py-8 md:py-10 bg-primary text-white overflow-hidden border-t border-primary/10">
       
       {/* Square Mesh Background Pattern */}
       <div 
@@ -53,12 +53,12 @@ export function TeamSection() {
         <SectionHeading
           title="Team & Experts"
           subtitle={siteContent.team.title}
-          className="mb-12"
+          className="!mb-6 md:!mb-8 lg:!mb-10"
           titleClassName="text-white"
           subtitleClassName="text-white/90"
         />
 
-        <div className="flex flex-col gap-12 md:gap-16">
+        <div className="flex flex-col gap-6 md:gap-8">
           
           {/* Tier 1: Chief Mentor */}
           <MotionWrapper variant="slideUp" delay={0.1}>
@@ -96,8 +96,8 @@ export function TeamSection() {
             </div>
           </MotionWrapper>
 
-          {/* Tier 3: Supporting Team */}
-          <MotionWrapper variant="slideUp" delay={0.3}>
+          {/* Tier 3: Supporting Team (Hidden for now as tenure is over) */}
+          {/* <MotionWrapper variant="slideUp" delay={0.3}>
             <div className="flex flex-col items-center">
               <h4 className="text-xs font-mono uppercase tracking-[0.2em] text-white/40 mb-6">Supporting Team (E-Cell)</h4>
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4 lg:gap-6 w-full max-w-5xl mx-auto">
@@ -115,7 +115,7 @@ export function TeamSection() {
                 })}
               </div>
             </div>
-          </MotionWrapper>
+          </MotionWrapper> */}
 
         </div>
       </Container>

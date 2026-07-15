@@ -3,7 +3,7 @@ import { siteContent } from "@/constants/siteContent";
 
 export function DatesSection() {
   return (
-    <section className="bg-primary border-y border-primary/10 py-10 md:py-12 overflow-hidden relative z-20">
+    <section className="bg-primary border-y border-primary/10 py-10 md:py-8 md:py-10 overflow-hidden relative z-20">
       {/* Subtle background glow */}
       <div className="absolute top-0 left-1/4 w-1/2 h-full bg-gradient-to-r from-transparent via-white/5 to-transparent skew-x-12" />
 

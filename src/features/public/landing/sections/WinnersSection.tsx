@@ -9,7 +9,7 @@ export function WinnersSection() {
   const { title, description, images, teams } = siteContent.winners;
 
   return (
-    <section id="winners" className="py-20 md:py-32 bg-gradient-to-br from-orange-50/40 via-white to-amber-50/30 border-y border-slate-200/50 relative overflow-hidden">
+    <section id="winners" className="py-20 md:py-8 md:py-10 bg-gradient-to-br from-orange-50/40 via-white to-amber-50/30 border-y border-slate-200/50 relative overflow-hidden">
 
       {/* Subtle background abstract shapes */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
@@ -17,7 +17,7 @@ export function WinnersSection() {
         <div className="absolute bottom-[-10%] left-[-10%] w-[400px] h-[400px] rounded-full bg-accent/5 blur-[100px]" />
       </div>
 
-      <Container className="relative z-10 mb-12 md:mb-16">
+      <Container className="relative z-10 mb-6 md:mb-8">
         <MotionWrapper variant="slideUp" className="flex flex-col items-center">
           <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-white border border-slate-200/60 text-slate-700 text-xs sm:text-sm font-bold tracking-widest uppercase shadow-sm mb-6">
             <Trophy className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-primary" />
@@ -37,7 +37,7 @@ export function WinnersSection() {
       </Container>
 
       <Container className="relative z-10">
-        <div className="flex flex-col gap-8 lg:gap-12">
+        <div className="flex flex-col gap-6 lg:gap-8">
 
           {/* Top Row: Landscape Images (Swipeable on Mobile, Grid on Desktop) */}
           <div className="flex md:grid md:grid-cols-2 gap-4 sm:gap-6 overflow-x-auto snap-x snap-mandatory pb-4 md:pb-0 scrollbar-none -mx-4 px-4 md:mx-0 md:px-0">

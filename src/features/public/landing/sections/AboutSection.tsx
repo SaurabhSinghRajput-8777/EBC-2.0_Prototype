@@ -8,7 +8,7 @@ import { Target, Users, Rocket, ArrowRight } from "lucide-react";
 
 export function AboutSection() {
   return (
-    <section id="about" className="relative py-20 md:py-32 bg-slate-50/50 overflow-hidden border-y border-slate-200/50">
+    <section id="about" className="relative py-20 md:py-8 md:py-10 bg-slate-50/50 overflow-hidden border-y border-slate-200/50">
       
       {/* Decorative Blur Backgrounds */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
@@ -17,10 +17,10 @@ export function AboutSection() {
       </div>
 
       <Container className="relative z-10">
-        <div className="flex flex-col lg:flex-row gap-10 sm:gap-12 lg:gap-20 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-stretch">
           
           {/* Left Side: Narrative Content */}
-          <div className="flex-1 flex flex-col items-start text-left relative z-20 w-full lg:max-w-[50%]">
+          <div className="flex flex-col items-start text-left relative z-20 w-full pr-0 lg:pr-4">
             
             <MotionWrapper variant="slideUp" delay={0.1}>
               <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-slate-100 border border-slate-200 text-slate-800 text-xs sm:text-sm font-bold tracking-widest uppercase shadow-sm mb-6">
@@ -41,7 +41,7 @@ export function AboutSection() {
               </p>
             </MotionWrapper>
 
-            <div className="w-full grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 mb-10">
+            <div className="w-full grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
               {/* Audience Card */}
               <MotionWrapper variant="slideUp" delay={0.4} className="h-full">
                 <div className="h-full p-5 sm:p-8 rounded-[20px] sm:rounded-[24px] bg-slate-50 border border-slate-200/60 shadow-sm hover:shadow-lg hover:border-primary/30 transition-all duration-300 group flex flex-col">
@@ -73,21 +73,12 @@ export function AboutSection() {
               </MotionWrapper>
             </div>
             
-            <MotionWrapper variant="slideUp" delay={0.6} className="w-full sm:w-auto">
-              <Link href="/founder-dating" passHref className="w-full sm:w-auto">
-                <Button size="lg" className="group relative overflow-hidden bg-slate-900 text-white hover:bg-slate-800 px-6 sm:px-8 py-6 rounded-xl sm:rounded-2xl shadow-xl hover:shadow-2xl transition-all w-full sm:w-auto">
-                  <span className="flex items-center justify-center gap-3 text-sm sm:text-base font-semibold">
-                    Find Co-Founders
-                    <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 transition-transform duration-300 group-hover:translate-x-1" />
-                  </span>
-                </Button>
-              </Link>
-            </MotionWrapper>
+
           </div>
 
           {/* Right Side: Bento Image Canvas */}
-          <div className="flex-1 w-full mt-4 sm:mt-10 lg:mt-0 relative h-[350px] sm:h-[500px] lg:h-[750px] rounded-[24px] sm:rounded-[40px] overflow-hidden shadow-2xl border-[6px] sm:border-8 border-slate-50 group">
-            <MotionWrapper variant="slideUp" delay={0.4} className="w-full h-full">
+          <div className="w-full h-full relative min-h-[350px] lg:min-h-0 rounded-[24px] sm:rounded-[40px] overflow-hidden shadow-2xl border-[6px] sm:border-8 border-slate-50 group">
+            <MotionWrapper variant="slideUp" delay={0.4} className="absolute inset-0 w-full h-full">
               <Image 
                 src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80" 
                 alt="Startup team collaborating" 

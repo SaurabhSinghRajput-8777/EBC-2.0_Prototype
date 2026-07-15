@@ -7,15 +7,15 @@ import { BookOpen } from "lucide-react";
 
 export function ResearchSection() {
   return (
-    <section id="research" className="py-24 md:py-32 bg-[#F5F8FC]">
+    <section id="research" className="py-24 md:py-8 md:py-10 bg-[#F5F8FC]">
       <Container>
         <SectionHeading 
           title="Rooted in Scientific Rigor" 
           subtitle="LifeBack™'s methodology is built upon decades of peer-reviewed psychiatric research and the latest advancements in computational paralinguistics."
-          className="mb-20"
+          className="mb-6 md:mb-8"
         />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-24">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
           <MotionWrapper variant="slideUp">
             <Card className="h-full border border-[#D6D6D6] hover:border-[#0A0C10] transition-colors duration-300">
               <Badge variant="muted" className="mb-6">Methodology</Badge>

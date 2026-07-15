@@ -27,7 +27,7 @@ function Dropdown({
       <Link
         href={href}
         className={cn(
-          "flex items-center gap-1.5 py-2 font-heading text-[15px] font-semibold text-primary transition-colors hover:text-primary hover:underline hover:decoration-accent hover:decoration-2 hover:underline-offset-8 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-4 focus-visible:ring-offset-background",
+          "flex items-center gap-1.5 py-2 font-heading text-[20px] font-semibold text-primary transition-colors hover:text-primary hover:underline hover:decoration-accent hover:decoration-2 hover:underline-offset-8 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-4 focus-visible:ring-offset-background",
           isActive && "underline decoration-accent decoration-2 underline-offset-8"
         )}
         aria-haspopup="true"
@@ -100,14 +100,14 @@ export function Header() {
           : "border-b border-transparent bg-transparent"
       )}
     >
-      <div className="flex h-24 w-full items-center justify-between px-6 md:px-10 lg:px-16 xl:px-20">
+      <div className="flex h-20 w-full items-center justify-between px-6 md:px-10 lg:px-16 xl:px-20">
         <Link
           href="/"
           className="flex items-center gap-3 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-4 focus-visible:ring-offset-background"
           aria-label="Home"
           onClick={closeMenu}
         >
-          <span className="relative block h-16 w-40 shrink-0 md:h-20 md:w-48">
+          <span className="relative block h-12 w-32 shrink-0 md:h-16 md:w-40">
             <Image
               src="/logo.png"
               alt={siteContent.header.logoAlt}
@@ -130,7 +130,7 @@ export function Header() {
                 key={link.href}
                 href={link.href}
                 className={cn(
-                  "py-2 font-heading text-[15px] font-semibold text-primary transition-colors hover:text-primary hover:underline hover:decoration-accent hover:decoration-2 hover:underline-offset-8 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-4 focus-visible:ring-offset-background",
+                  "py-2 font-heading text-[20px] font-semibold text-primary transition-colors hover:text-primary hover:underline hover:decoration-accent hover:decoration-2 hover:underline-offset-8 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-4 focus-visible:ring-offset-background",
                   isActive && "underline decoration-accent decoration-2 underline-offset-8"
                 )}
                 aria-current={isActive ? "page" : undefined}

@@ -10,26 +10,28 @@ const icons = [Users, Presentation, Building, Globe, Zap, Rocket];
 
 export function HighlightsSection() {
   return (
-    <section id="highlights" className="relative py-20 md:py-32 bg-slate-50/50 overflow-hidden border-y border-slate-200/50">
+    <section id="highlights" className="relative py-12 md:py-8 lg:py-10 bg-slate-50/50 overflow-hidden border-y border-slate-200/50 flex flex-col justify-center max-h-screen">
       
-      <Container className="relative z-10 mb-10 md:mb-16 flex flex-col items-center">
+      <Container className="relative z-10 mb-0 md:mb-2 flex flex-col items-center">
         <MotionWrapper variant="slideUp" className="flex flex-col items-center">
           <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-white border border-slate-200 text-slate-800 text-xs sm:text-sm font-bold tracking-widest uppercase shadow-sm mb-6">
             <Sparkles className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-accent" />
             <span>Why Join Us</span>
           </div>
-          <SectionHeading
-            title={siteContent.highlights.title}
-            subtitle={siteContent.highlights.description}
-            titleClassName="text-slate-900"
-            className="!mb-0"
-          />
+          <div className="flex flex-col items-center text-center w-full max-w-none px-4">
+            <h2 className="font-serif font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl tracking-tight mb-4 md:mb-6 leading-tight text-slate-900 whitespace-nowrap">
+              {siteContent.highlights.title}
+            </h2>
+            <p className="text-base sm:text-lg md:text-xl leading-relaxed max-w-3xl mx-auto text-slate-600">
+              {siteContent.highlights.description}
+            </p>
+          </div>
         </MotionWrapper>
       </Container>
 
       {/* Full width marquee container */}
-      <div className="w-full pb-8 md:pb-12 overflow-hidden">
-        <Marquee speed="normal" className="py-6" showArrows={false}>
+      <div className="w-full pb-4 md:pb-6 overflow-hidden">
+        <Marquee speed="normal" className="py-4" showArrows={false}>
           {siteContent.highlights.items.map((card, i) => {
             const Icon = icons[i % icons.length]!;
             return (
@@ -44,8 +46,8 @@ export function HighlightsSection() {
                     {String(i + 1).padStart(2, '0')}
                   </div>
 
-                  <div className="flex flex-col h-full relative z-10 px-6 py-6 md:px-8 md:py-8">
-                    <div className="flex items-start md:items-center gap-4 mb-4 md:mb-5">
+                  <div className="flex flex-col h-full relative z-10 px-5 py-5 md:px-6 md:py-6">
+                    <div className="flex items-start md:items-center gap-3 mb-3 md:mb-4">
                       <div className="w-12 h-12 shrink-0 rounded-2xl bg-slate-50 border border-slate-200 shadow-sm flex items-center justify-center text-primary group-hover:scale-110 group-hover:bg-primary group-hover:border-primary group-hover:text-white transition-all duration-500">
                         <Icon className="w-5 h-5 md:w-6 md:h-6" strokeWidth={2} />
                       </div>

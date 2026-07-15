@@ -7,7 +7,7 @@ import { Map } from "lucide-react";
 
 export function StructureSection() {
   return (
-    <section id="bootcamp" className="py-20 sm:py-24 md:py-32 lg:py-40 bg-slate-50/50 text-foreground border-y border-slate-200/60 relative overflow-hidden">
+    <section id="bootcamp" className="py-20 sm:py-24 md:py-32 lg:py-8 md:py-10 bg-slate-50/50 text-foreground border-y border-slate-200/60 relative overflow-hidden">
       {/* Decorative background elements */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
         <div className="absolute top-[-10%] right-[-5%] w-[500px] h-[500px] rounded-full bg-primary/5 blur-[100px]" />
@@ -15,7 +15,7 @@ export function StructureSection() {
       </div>
 
       <Container className="relative z-10">
-        <div className="text-center max-w-3xl mx-auto mb-16 md:mb-24 flex flex-col items-center">
+        <div className="text-center max-w-3xl mx-auto mb-6 md:mb-8 flex flex-col items-center">
           <MotionWrapper variant="slideUp" className="flex flex-col items-center">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-slate-200 text-slate-800 text-xs sm:text-sm font-bold tracking-widest uppercase shadow-sm mb-6">
               <Map className="w-4 h-4 text-primary" />
@@ -30,7 +30,7 @@ export function StructureSection() {
           </MotionWrapper>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 lg:gap-12 relative">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-6 lg:gap-8 relative">
           {siteContent.structure.steps.map((item, index) => (
             <MotionWrapper key={index} variant="slideUp" delay={0.1 * (index + 1)} className="h-full">
               <div className="group relative bg-white rounded-[24px] sm:rounded-[32px] p-2 sm:p-2.5 border border-slate-200/60 shadow-md hover:shadow-2xl transition-all duration-500 overflow-hidden flex flex-col h-full">
