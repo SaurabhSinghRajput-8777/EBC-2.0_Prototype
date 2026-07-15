@@ -8,6 +8,7 @@ import { ChevronDown, Menu, X } from "lucide-react";
 import { cn } from "@/shared/lib/utils";
 import { requestDemoLinkStyles } from "@/shared/ui/Button";
 import { siteContent } from "@/constants/siteContent";
+import { ThemeToggle } from "@/components/ui/ThemeToggle";
 
 function Dropdown({
   label,
@@ -27,7 +28,7 @@ function Dropdown({
       <Link
         href={href}
         className={cn(
-          "flex items-center gap-1.5 py-2 font-heading text-[20px] font-semibold text-primary transition-colors hover:text-primary hover:underline hover:decoration-accent hover:decoration-2 hover:underline-offset-8 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-4 focus-visible:ring-offset-background",
+          "flex items-center gap-1.5 py-2 font-heading text-[20px] font-semibold text-[#004A99] transition-colors hover:text-[#004A99] hover:underline hover:decoration-accent hover:decoration-2 hover:underline-offset-8 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-4 focus-visible:ring-offset-background",
           isActive && "underline decoration-accent decoration-2 underline-offset-8"
         )}
         aria-haspopup="true"
@@ -48,7 +49,7 @@ function Dropdown({
               key={link.href}
               href={link.href}
               className={cn(
-                "group/link flex items-center gap-3 rounded-[4px] px-4 py-3 font-heading text-[14px] font-semibold text-primary transition-colors hover:bg-primary/[0.04] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent",
+                "group/link flex items-center gap-3 rounded-[4px] px-4 py-3 font-heading text-[14px] font-semibold text-[#004A99] transition-colors hover:bg-primary/[0.04] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent",
                 pathname === link.href && "bg-primary/[0.04] underline decoration-accent decoration-2 underline-offset-4"
               )}
               aria-current={pathname === link.href ? "page" : undefined}
@@ -130,7 +131,7 @@ export function Header() {
                 key={link.href}
                 href={link.href}
                 className={cn(
-                  "py-2 font-heading text-[20px] font-semibold text-primary transition-colors hover:text-primary hover:underline hover:decoration-accent hover:decoration-2 hover:underline-offset-8 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-4 focus-visible:ring-offset-background",
+                  "py-2 font-heading text-[20px] font-semibold text-[#004A99] transition-colors hover:text-[#004A99] hover:underline hover:decoration-accent hover:decoration-2 hover:underline-offset-8 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-4 focus-visible:ring-offset-background",
                   isActive && "underline decoration-accent decoration-2 underline-offset-8"
                 )}
                 aria-current={isActive ? "page" : undefined}
@@ -141,7 +142,8 @@ export function Header() {
           })}
         </nav>
 
-        <div className="hidden items-center lg:flex">
+        <div className="hidden items-center gap-4 lg:flex">
+          <ThemeToggle />
           <Link
             href={siteContent.header.cta.href}
             className={requestDemoLinkStyles}
@@ -152,7 +154,7 @@ export function Header() {
 
         <button
           type="button"
-          className="inline-flex h-11 w-11 items-center justify-center rounded-[4px] border border-primary/15 text-primary lg:hidden"
+          className="inline-flex h-11 w-11 items-center justify-center rounded-[4px] border border-primary/15 text-[#004A99] lg:hidden"
           aria-label={isMenuOpen ? "Close navigation menu" : "Open navigation menu"}
           aria-expanded={isMenuOpen}
           onClick={() => setIsMenuOpen((current) => !current)}
@@ -197,7 +199,7 @@ export function Header() {
                     href={link.href}
                     onClick={closeMenu}
                     className={cn(
-                      "rounded-[4px] py-3 font-heading text-[18px] font-semibold text-primary hover:text-primary hover:underline hover:decoration-accent hover:underline-offset-4",
+                      "rounded-[4px] py-3 font-heading text-[18px] font-semibold text-[#004A99] hover:text-[#004A99] hover:underline hover:decoration-accent hover:underline-offset-4",
                       isActive && "underline decoration-accent decoration-2 underline-offset-4"
                     )}
                     aria-current={isActive ? "page" : undefined}
@@ -206,6 +208,11 @@ export function Header() {
                   </Link>
                 );
               })}
+            </div>
+
+            <div className="flex items-center justify-between mt-2 pt-4 border-t border-primary/10">
+              <span className="font-heading font-semibold text-[#004A99]">Theme</span>
+              <ThemeToggle />
             </div>
 
             <Link
@@ -243,8 +250,8 @@ function MobileLinkGroup({
         href={href}
         onClick={onSelect}
         className={cn(
-          "mb-2 inline-flex font-mono text-[11px] font-bold uppercase tracking-[0.14em] text-primary/60 transition-colors hover:text-primary hover:underline hover:decoration-accent hover:underline-offset-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-4 focus-visible:ring-offset-background",
-          isActive && "text-primary underline decoration-accent decoration-2 underline-offset-4"
+          "mb-2 inline-flex font-mono text-[11px] font-bold uppercase tracking-[0.14em] text-[#004A99]/60 transition-colors hover:text-[#004A99] hover:underline hover:decoration-accent hover:underline-offset-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-4 focus-visible:ring-offset-background",
+          isActive && "text-[#004A99] underline decoration-accent decoration-2 underline-offset-4"
         )}
         aria-current={isActive ? "page" : undefined}
       >
@@ -257,7 +264,7 @@ function MobileLinkGroup({
             href={link.href}
             onClick={onSelect}
             className={cn(
-              "rounded-[4px] py-2 font-heading text-[17px] font-semibold text-primary hover:text-primary hover:underline hover:decoration-accent hover:underline-offset-4",
+              "rounded-[4px] py-2 font-heading text-[17px] font-semibold text-[#004A99] hover:text-[#004A99] hover:underline hover:decoration-accent hover:underline-offset-4",
               pathname === link.href && "underline decoration-accent decoration-2 underline-offset-4"
             )}
             aria-current={pathname === link.href ? "page" : undefined}

@@ -18,13 +18,13 @@ export function ScheduleSection() {
         <div className="relative mb-6 md:mb-8 flex flex-col items-center text-center">
           {/* Decorative background text */}
           <div className="relative z-10">
-            <h2 className="font-serif font-bold text-4xl md:text-5xl lg:text-6xl tracking-tight text-[#0A0C10] mb-6 md:mb-8">
+            <h2 className="font-serif font-bold text-4xl md:text-5xl lg:text-6xl tracking-tight text-foreground mb-6 md:mb-8">
               {siteContent.schedule.title}
             </h2>
             
             {/* Venue & Time Badges */}
             {siteContent.schedule.subtitle && (
-              <div className="inline-flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6 bg-white/80 backdrop-blur-sm border border-primary/10 shadow-sm px-6 py-3 rounded-2xl mx-auto">
+              <div className="inline-flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6 bg-surface/80 backdrop-blur-sm border border-primary/10 dark:border-white/10 shadow-sm px-6 py-3 rounded-2xl mx-auto">
                 <div className="flex items-center gap-2">
                   <svg className="w-5 h-5 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />

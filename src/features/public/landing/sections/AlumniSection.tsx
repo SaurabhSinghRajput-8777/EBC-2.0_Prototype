@@ -40,19 +40,19 @@ function ImageSlideshow({ images, alt }: { images: string[], alt: string }) {
 
 export function AlumniSection() {
   return (
-    <section className="py-24 md:py-8 md:py-10 bg-surface">
+    <section className="relative py-24 md:py-8 md:py-10 bg-surface overflow-hidden border-y border-primary/10 dark:border-white/5">
       <Container>
         <SectionHeading
           title={siteContent.alumni.title}
           subtitle={siteContent.alumni.description}
           className="mb-6 md:mb-8"
-          titleClassName="text-primary"
+          titleClassName="text-foreground"
         />
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
           {siteContent.alumni.talks.map((talk, index) => (
             <MotionWrapper key={index} variant="slideUp" delay={0.1 * index}>
-              <Card className="h-full bg-background border border-primary/5 hover:border-primary/20 hover:shadow-lg transition-all duration-500 group overflow-hidden p-0 flex flex-col cursor-pointer">
+              <Card className="h-full bg-background border border-primary/10 dark:border-white/10 hover:border-primary/30 hover:shadow-lg transition-all duration-500 group overflow-hidden p-0 flex flex-col cursor-pointer">
                 <div className="relative w-full h-64 overflow-hidden">
                   <ImageSlideshow 
                     images={Array.isArray(talk.image) ? talk.image : [talk.image]} 
@@ -61,7 +61,7 @@ export function AlumniSection() {
                   {/* Reduced vignette opacity for clearer images */}
                   <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent opacity-20"></div>
                 </div>
-                <div className="p-6 md:p-8 relative z-10 flex-grow flex flex-col bg-white">
+                <div className="p-6 md:p-8 relative z-10 flex-grow flex flex-col bg-background">
                   <div className="mb-6">
                     <h3 className="text-2xl font-serif text-foreground mb-1">{talk.name}</h3>
                     <p className="text-accent font-semibold uppercase tracking-wider text-sm">{talk.startup}</p>

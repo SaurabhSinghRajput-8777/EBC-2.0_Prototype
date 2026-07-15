@@ -8,7 +8,7 @@ import { Target, Users, Rocket, ArrowRight } from "lucide-react";
 
 export function AboutSection() {
   return (
-    <section id="about" className="relative py-20 md:py-8 md:py-10 bg-slate-50/50 overflow-hidden border-y border-slate-200/50">
+    <section id="about" className="relative py-20 md:py-8 md:py-10 bg-surface overflow-hidden border-y border-primary/10 dark:border-white/5">
       
       {/* Decorative Blur Backgrounds */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
@@ -23,20 +23,20 @@ export function AboutSection() {
           <div className="flex flex-col items-start text-left relative z-20 w-full pr-0 lg:pr-4">
             
             <MotionWrapper variant="slideUp" delay={0.1}>
-              <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-slate-100 border border-slate-200 text-slate-800 text-xs sm:text-sm font-bold tracking-widest uppercase shadow-sm mb-6">
+              <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-background border border-primary/10 dark:border-white/10 text-foreground text-xs sm:text-sm font-bold tracking-widest uppercase shadow-sm mb-6">
                 <Target className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-accent" />
                 <span>The Objective</span>
               </div>
             </MotionWrapper>
 
             <MotionWrapper variant="slideUp" delay={0.2}>
-              <h2 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold text-slate-900 mb-6 leading-[1.1] tracking-tight">
+              <h2 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold text-foreground mb-6 leading-[1.1] tracking-tight">
                 {siteContent.about.goal.title}
               </h2>
             </MotionWrapper>
             
             <MotionWrapper variant="slideUp" delay={0.3}>
-              <p className="text-lg sm:text-xl text-slate-600 mb-8 sm:mb-10 leading-relaxed font-medium">
+              <p className="text-lg sm:text-xl text-secondary-text mb-8 sm:mb-10 leading-relaxed font-medium">
                 {siteContent.about.goal.description}
               </p>
             </MotionWrapper>
@@ -44,14 +44,14 @@ export function AboutSection() {
             <div className="w-full grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
               {/* Audience Card */}
               <MotionWrapper variant="slideUp" delay={0.4} className="h-full">
-                <div className="h-full p-5 sm:p-8 rounded-[20px] sm:rounded-[24px] bg-slate-50 border border-slate-200/60 shadow-sm hover:shadow-lg hover:border-primary/30 transition-all duration-300 group flex flex-col">
+                <div className="h-full p-5 sm:p-8 rounded-[20px] sm:rounded-[24px] bg-background border border-primary/10 dark:border-white/10 shadow-sm hover:shadow-lg hover:border-primary/30 transition-all duration-300 group flex flex-col">
                   <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4 sm:mb-5 group-hover:scale-110 transition-transform duration-300 shrink-0">
                     <Users className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
                   </div>
-                  <h3 className="text-lg sm:text-xl font-bold text-slate-900 mb-2 sm:mb-3">
+                  <h3 className="text-lg sm:text-xl font-bold text-foreground mb-2 sm:mb-3">
                     {siteContent.about.audience.title}
                   </h3>
-                  <p className="text-sm sm:text-base text-slate-600 leading-relaxed flex-1">
+                  <p className="text-sm sm:text-base text-secondary-text leading-relaxed flex-1">
                     {siteContent.about.audience.description}
                   </p>
                 </div>
@@ -59,14 +59,14 @@ export function AboutSection() {
 
               {/* Future Card */}
               <MotionWrapper variant="slideUp" delay={0.5} className="h-full">
-                <div className="h-full p-5 sm:p-8 rounded-[20px] sm:rounded-[24px] bg-slate-50 border border-slate-200/60 shadow-sm hover:shadow-lg hover:border-accent/30 transition-all duration-300 group flex flex-col">
+                <div className="h-full p-5 sm:p-8 rounded-[20px] sm:rounded-[24px] bg-background border border-primary/10 dark:border-white/10 shadow-sm hover:shadow-lg hover:border-accent/30 transition-all duration-300 group flex flex-col">
                   <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-accent/10 flex items-center justify-center mb-4 sm:mb-5 group-hover:scale-110 transition-transform duration-300 shrink-0">
                     <Rocket className="w-5 h-5 sm:w-6 sm:h-6 text-accent" />
                   </div>
-                  <h3 className="text-lg sm:text-xl font-bold text-slate-900 mb-2 sm:mb-3">
+                  <h3 className="text-lg sm:text-xl font-bold text-foreground mb-2 sm:mb-3">
                     {siteContent.about.future.title}
                   </h3>
-                  <p className="text-sm sm:text-base text-slate-600 leading-relaxed flex-1">
+                  <p className="text-sm sm:text-base text-secondary-text leading-relaxed flex-1">
                     {siteContent.about.future.description}
                   </p>
                 </div>
@@ -77,7 +77,7 @@ export function AboutSection() {
           </div>
 
           {/* Right Side: Bento Image Canvas */}
-          <div className="w-full h-full relative min-h-[350px] lg:min-h-0 rounded-[24px] sm:rounded-[40px] overflow-hidden shadow-2xl border-[6px] sm:border-8 border-slate-50 group">
+          <div className="w-full h-full relative min-h-[350px] lg:min-h-0 rounded-[24px] sm:rounded-[40px] overflow-hidden shadow-2xl border-[6px] sm:border-8 border-background group">
             <MotionWrapper variant="slideUp" delay={0.4} className="absolute inset-0 w-full h-full">
               <Image 
                 src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80" 

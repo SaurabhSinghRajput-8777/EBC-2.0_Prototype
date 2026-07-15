@@ -28,7 +28,7 @@ export function VisionSection() {
         className="absolute inset-0 w-full h-full object-cover"
         src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260302_085844_21a8f4b3-dea5-4ede-be16-d53f6973bb14.mp4"
       />
-      <div className="absolute inset-0 z-0 bg-primary/70 backdrop-blur-[2px]" />
+      <div className="absolute inset-0 z-0 bg-primary/70 dark:bg-black/40 backdrop-blur-[2px]" />
 
       <Container>
         <div className="max-w-5xl mx-auto text-center relative z-10">

@@ -5,9 +5,9 @@ import { ScrollToTopButton } from "@/features/public/landing/components/ScrollTo
 
 export function PublicLayout({ children }: { children: ReactNode }) {
   return (
-    <div className="flex min-h-screen flex-col bg-[#F5F8FC] font-body">
+    <div className="flex min-h-screen flex-col bg-background font-body transition-colors duration-300">
       <Header />
-      <main className="flex-1 bg-[#F5F8FC]">{children}</main>
+      <main className="flex-1 bg-background transition-colors duration-300">{children}</main>
       <Footer />
       <ScrollToTopButton />
     </div>

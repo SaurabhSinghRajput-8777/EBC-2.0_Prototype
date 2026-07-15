@@ -14,8 +14,8 @@ function TeamCard({ name, position, description, image }: { name: string; positi
       <div className="relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
         
         {/* Front of Card */}
-        <div className="absolute inset-0 [backface-visibility:hidden] bg-[#0A2540] border border-white/5 rounded-2xl p-3 md:p-6 flex flex-col items-center justify-center text-center shadow-[0_8px_30px_rgb(0,0,0,0.12)]">
-          <div className="w-12 h-12 md:w-16 md:h-16 rounded-full overflow-hidden border border-white/10 mb-2 md:mb-4 relative shrink-0 bg-[#0F3057]">
+        <div className="absolute inset-0 [backface-visibility:hidden] bg-[#0F172A] border border-white/10 rounded-2xl p-3 md:p-6 flex flex-col items-center justify-center text-center shadow-[0_8px_30px_rgb(0,0,0,0.12)]">
+          <div className="w-12 h-12 md:w-16 md:h-16 rounded-full overflow-hidden border border-white/10 mb-2 md:mb-4 relative shrink-0 bg-[#1E293B]">
             <Image src={avatarUrl} alt={name} fill className="object-cover" unoptimized />
           </div>
           <h3 className="text-white font-semibold text-xs sm:text-sm md:text-base mb-1">{name}</h3>
@@ -23,7 +23,7 @@ function TeamCard({ name, position, description, image }: { name: string; positi
         </div>
 
         {/* Back of Card */}
-        <div className="absolute inset-0 [backface-visibility:hidden] [transform:rotateY(180deg)] bg-[#0A2540] border border-white/10 rounded-2xl p-3 sm:p-4 md:p-5 flex flex-col items-center justify-center text-center shadow-[0_20px_40px_rgb(0,0,0,0.2)] overflow-hidden">
+        <div className="absolute inset-0 [backface-visibility:hidden] [transform:rotateY(180deg)] bg-[#0F172A] border border-white/10 rounded-2xl p-3 sm:p-4 md:p-5 flex flex-col items-center justify-center text-center shadow-[0_20px_40px_rgb(0,0,0,0.2)] overflow-hidden">
           <h3 className="text-white font-bold text-xs sm:text-sm md:text-base mb-2 pb-2 md:mb-3 md:pb-3 border-b border-white/10 w-full">{name}</h3>
           <p className="text-[#CBD5E1] text-[10px] sm:text-xs md:text-sm leading-relaxed line-clamp-4">{description}</p>
         </div>
@@ -35,7 +35,7 @@ function TeamCard({ name, position, description, image }: { name: string; positi
 
 export function TeamSection() {
   return (
-    <section id="team" className="relative py-16 md:py-8 md:py-10 bg-primary text-white overflow-hidden border-t border-primary/10">
+    <section id="team" className="relative py-16 md:py-8 md:py-10 bg-[#003366] text-white overflow-hidden border-t border-[#003366]/10">
       
       {/* Square Mesh Background Pattern */}
       <div 

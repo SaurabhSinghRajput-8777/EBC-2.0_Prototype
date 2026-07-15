@@ -7,7 +7,7 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 export const requestDemoLinkStyles =
-  "inline-flex min-h-13 items-center justify-center rounded-[10px] border border-[#001B65] bg-[#001B65] px-7 font-heading text-[12px] font-bold uppercase tracking-[0.14em] text-white shadow-[0_12px_28px_rgba(0,27,101,0.14)] transition-colors hover:border-[#D4AF37] hover:bg-[#00164F] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#D4AF37] focus-visible:ring-offset-4 focus-visible:ring-offset-[#F5F8FC]";
+  "inline-flex min-h-13 items-center justify-center rounded-[10px] border border-[#C8102E] bg-[#C8102E] px-7 font-heading text-[12px] font-bold uppercase tracking-[0.14em] text-white shadow-[0_12px_28px_rgba(200,16,46,0.2)] transition-colors hover:border-[#E63946] hover:bg-[#E63946] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C8102E] focus-visible:ring-offset-4 focus-visible:ring-offset-[#F5F8FC]";
 
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, variant = "primary", size = "md", ...props }, ref) => {

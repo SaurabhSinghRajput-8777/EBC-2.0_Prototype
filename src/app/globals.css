@@ -1,23 +1,70 @@
 @config "../../tailwind.config.ts";
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
-  --color-primary: #004A99;
-  --color-primary-light: #1D6FD8;
-  --color-accent: #C8102E;
-  --color-accent-light: #E63946;
-  --color-background: #FAFAFA;
-  --color-surface: #FFFFFF;
-  --color-foreground: #0F172A;
-  --color-muted: #94A3B8;
-  --color-secondary-text: #475569;
-  --color-border: rgba(0,0,0,0.1);
+  --color-primary: var(--primary);
+  --color-primary-light: var(--primary-hover);
+  --color-accent: var(--accent);
+  --color-accent-light: var(--accent-light);
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-foreground: var(--text);
+  --color-muted: var(--muted);
+  --color-secondary-text: var(--text-secondary);
+  --color-border: var(--border);
   
   --font-heading: var(--font-plus-jakarta);
   --font-body: var(--font-inter);
   --font-sans: var(--font-inter);
   --font-serif: var(--font-plus-jakarta);
   --font-mono: var(--font-space-mono);
+}
+
+:root {
+  /* Light Mode Palette */
+  --primary: #004A99;
+  --primary-hover: #1D6FD8;
+  --accent: #C8102E;
+  --accent-light: #E63946;
+  --background: #F5F8FC;
+  --surface: #FFFFFF;
+  --text: #0F172A;
+  --text-secondary: #475569;
+  --muted: #94A3B8;
+  --border: rgba(0,0,0,0.1);
+}
+
+.dark {
+  /* Dark Mode Palette (GitHub Dark + Blue Cards) */
+  --background: #0D1117;
+  --surface: #0A2040;
+  --surface-light: #161B22;
+
+  --text: #F0F6FC;
+  --text-secondary: #C9D1D9;
+  --muted: #8B949E;
+
+  --primary: #2F81F7;
+  --primary-hover: #58A6FF;
+
+  --border: #30363D;
+
+  --accent: #F85149;
+  --accent-light: #FF7B72;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--text);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Fix Light Hero Video for Dark Mode */
+.dark video.hero-video {
+  opacity: 0.45;
+  mix-blend-mode: screen;
 }
 
 /*

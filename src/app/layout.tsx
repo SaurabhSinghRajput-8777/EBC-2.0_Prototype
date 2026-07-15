@@ -51,17 +51,26 @@ export const metadata: Metadata = {
 
 import { LoadingScreen } from "@/shared/ui/LoadingScreen";
 
+import { ThemeProvider } from "@/components/providers/ThemeProvider";
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${plusJakarta.variable} ${inter.variable} ${spaceMono.variable}`}>
-      <body className="antialiased font-body" suppressHydrationWarning>
-        <LoadingScreen />
-        {children}
-        <Analytics />
+    <html lang="en" className={`${plusJakarta.variable} ${inter.variable} ${spaceMono.variable}`} suppressHydrationWarning>
+      <body className="antialiased font-body transition-colors duration-300" suppressHydrationWarning>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem={false}
+          disableTransitionOnChange
+        >
+          <LoadingScreen />
+          {children}
+          <Analytics />
+        </ThemeProvider>
       </body>
     </html>
   );
