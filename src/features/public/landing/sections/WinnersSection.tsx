@@ -6,7 +6,7 @@ import { Trophy } from "lucide-react";
 import { MotionWrapper } from "@/shared/animations/MotionWrapper";
 
 export function WinnersSection() {
-  const { title, description, images, teams } = siteContent.winners;
+  const { description, images, teams } = siteContent.winners;
 
   return (
     <section id="winners" className="py-12 md:py-16 lg:py-12 bg-surface border-y border-primary/10 dark:border-white/5 relative overflow-hidden">

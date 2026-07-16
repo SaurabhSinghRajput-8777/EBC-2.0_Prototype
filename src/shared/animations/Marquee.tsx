@@ -26,12 +26,7 @@ export function Marquee({
   const [isDragging, setIsDragging] = useState(false);
   const isAnimatingRef = useRef(false);
   
-  // Speed multiplier
-  const getSpeed = () => {
-    if (speed === "fast") return 1.5;
-    if (speed === "slow") return 0.5;
-    return 1;
-  };
+
 
   useEffect(() => {
     const el = scrollRef.current;
@@ -48,7 +43,10 @@ export function Marquee({
 
       // Only auto-scroll if not hovered (when pauseOnHover is true), not dragging, and not currently arrow-scrolling
       if ((!pauseOnHover || !isHovered) && !isDragging && !isAnimatingRef.current) {
-        const moveAmount = getSpeed() * (deltaTime / 16);
+        let speedMult = 1;
+        if (speed === "fast") speedMult = 1.5;
+        else if (speed === "slow") speedMult = 0.5;
+        const moveAmount = speedMult * (deltaTime / 16);
         
         if (direction === "left") {
           exactScrollLeft += moveAmount;

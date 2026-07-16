@@ -17,7 +17,7 @@ export function VisionSection() {
 
   return (
     <section className="py-32 md:py-48 lg:py-8 md:py-10 bg-primary text-white overflow-hidden relative">
-      <video preload="auto"
+      <video
         ref={videoRef}
         autoPlay
         muted

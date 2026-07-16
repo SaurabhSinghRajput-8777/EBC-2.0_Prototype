@@ -1,6 +1,5 @@
 import { Container } from "@/shared/ui/Container";
 import { Card } from "@/shared/ui/Card";
-import { SectionHeading } from "@/shared/ui/SectionHeading";
 import { Users, Presentation, Building, Globe, Zap, Rocket, Sparkles } from "lucide-react";
 import { Marquee } from "@/shared/animations/Marquee";
 import { siteContent } from "@/constants/siteContent";

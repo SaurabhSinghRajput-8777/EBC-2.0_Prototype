@@ -1,10 +1,8 @@
-import { Button } from "@/shared/ui/Button";
 import { MotionWrapper } from "@/shared/animations/MotionWrapper";
-import Link from "next/link";
 import { Container } from "@/shared/ui/Container";
 import Image from "next/image";
 import { siteContent } from "@/constants/siteContent";
-import { Target, Users, Rocket, ArrowRight } from "lucide-react";
+import { Target, Users, Rocket } from "lucide-react";
 
 export function AboutSection() {
   return (

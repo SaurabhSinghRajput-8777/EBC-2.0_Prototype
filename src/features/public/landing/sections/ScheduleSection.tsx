@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import { Container } from "@/shared/ui/Container";
-import { SectionHeading } from "@/shared/ui/SectionHeading";
 import { MotionWrapper } from "@/shared/animations/MotionWrapper";
 import { siteContent } from "@/constants/siteContent";
 import { AnimatePresence, motion } from "framer-motion";
