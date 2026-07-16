@@ -9,7 +9,7 @@ export function WinnersSection() {
   const { title, description, images, teams } = siteContent.winners;
 
   return (
-    <section id="winners" className="py-20 md:py-8 md:py-10 bg-surface border-y border-primary/10 dark:border-white/5 relative overflow-hidden">
+    <section id="winners" className="py-12 md:py-16 lg:py-12 bg-surface border-y border-primary/10 dark:border-white/5 relative overflow-hidden">
 
       {/* Subtle background abstract shapes */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
@@ -19,7 +19,7 @@ export function WinnersSection() {
 
       <Container className="relative z-10 mb-6 md:mb-8">
         <MotionWrapper variant="slideUp" className="flex flex-col items-center">
-          <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-background border border-primary/10 dark:border-white/10 text-foreground text-xs sm:text-sm font-bold tracking-widest uppercase shadow-sm mb-6">
+          <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-background border border-primary/10 dark:border-white/10 text-foreground text-xs sm:text-sm font-bold tracking-widest uppercase shadow-sm mb-3">
             <Trophy className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-primary" />
             <span>Hall of Fame</span>
           </div>
@@ -30,7 +30,7 @@ export function WinnersSection() {
               </>
             }
             subtitle={description}
-            titleClassName="text-foreground"
+            titleClassName="text-foreground !mb-2 md:!mb-3"
             className="!mb-0"
           />
         </MotionWrapper>
@@ -73,21 +73,27 @@ export function WinnersSection() {
                 return (
                   <div
                     key={idx}
-                    className="relative flex flex-col items-start justify-end p-4 sm:p-6 rounded-[16px] sm:rounded-[20px] bg-[#0F172A] border border-white/5 hover:border-white/20 shadow-[0_4px_20px_rgb(0,0,0,0.08)] hover:shadow-[0_12px_30px_rgb(0,0,0,0.15)] transition-all duration-500 group hover:-translate-y-1 cursor-pointer overflow-hidden min-h-[105px] sm:min-h-[140px] snap-center shrink-0"
+                    className="relative flex flex-col items-start justify-end p-3 sm:p-4 rounded-[16px] sm:rounded-[20px] bg-background border border-primary/10 dark:border-white/10 shadow-sm hover:shadow-2xl transition-all duration-500 group hover:-translate-y-1.5 cursor-pointer overflow-hidden min-h-[85px] sm:min-h-[100px] snap-center shrink-0"
                   >
+                    {/* Decorative Inner Glow */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-transparent opacity-100 pointer-events-none z-0"></div>
+
                     {/* Background Watermark Number */}
-                    <div className="absolute -top-1 -right-1 sm:-top-2 sm:-right-2 text-[54px] sm:text-[90px] font-black text-white/5 group-hover:text-white/10 transition-colors duration-700 pointer-events-none select-none leading-none tracking-tighter z-0">
+                    <div className="absolute -bottom-4 -right-2 sm:-bottom-6 sm:-right-4 text-[70px] sm:text-[110px] font-black text-primary/5 dark:text-primary/10 opacity-30 pointer-events-none select-none leading-none tracking-tighter z-0">
                       {number}
                     </div>
 
-                    {/* Left structural accent line on hover */}
-                    <div className="absolute left-0 bottom-0 w-1 h-0 bg-primary group-hover:h-full transition-all duration-500 opacity-0 group-hover:opacity-100 z-10" />
+                    {/* Top structural gradient accent line */}
+                    <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary to-accent opacity-100 z-10" />
 
                     <div className="relative z-10 flex flex-col w-full text-left mt-auto">
-                      <span className="text-[14px] sm:text-lg font-bold text-white mb-0.5 group-hover:text-primary-hover transition-colors duration-300 line-clamp-1">
-                        {team.startup}
-                      </span>
-                      <span className="text-[11px] sm:text-sm font-medium text-[#CBD5E1] line-clamp-1">
+                      <div className="flex items-center gap-1.5 mb-0.5 sm:mb-1">
+                        <Trophy className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-accent shrink-0" />
+                        <span className="text-[14px] sm:text-lg font-bold text-primary line-clamp-1">
+                          {team.startup}
+                        </span>
+                      </div>
+                      <span className="text-[11px] sm:text-sm font-medium text-foreground/80 line-clamp-1">
                         by {team.founder}
                       </span>
                     </div>

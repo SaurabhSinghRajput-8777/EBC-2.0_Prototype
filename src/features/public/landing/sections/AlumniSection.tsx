@@ -40,13 +40,13 @@ function ImageSlideshow({ images, alt }: { images: string[], alt: string }) {
 
 export function AlumniSection() {
   return (
-    <section className="relative py-24 md:py-8 md:py-10 bg-surface overflow-hidden border-y border-primary/10 dark:border-white/5">
+    <section className="relative pt-6 pb-12 md:pt-8 md:pb-16 lg:pt-8 lg:pb-12 bg-surface overflow-hidden border-y border-primary/10 dark:border-white/5">
       <Container>
         <SectionHeading
           title={siteContent.alumni.title}
           subtitle={siteContent.alumni.description}
-          className="mb-6 md:mb-8"
-          titleClassName="text-foreground"
+          className="mb-0 md:mb-2"
+          titleClassName="text-foreground !mb-2 md:!mb-3"
         />
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">

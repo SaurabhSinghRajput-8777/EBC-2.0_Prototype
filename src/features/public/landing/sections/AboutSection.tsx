@@ -36,7 +36,7 @@ export function AboutSection() {
             </MotionWrapper>
             
             <MotionWrapper variant="slideUp" delay={0.3}>
-              <p className="text-lg sm:text-xl text-secondary-text mb-8 sm:mb-10 leading-relaxed font-medium">
+              <p className="text-lg sm:text-xl text-secondary-text mb-8 sm:mb-10 leading-relaxed font-medium text-justify">
                 {siteContent.about.goal.description}
               </p>
             </MotionWrapper>
@@ -51,7 +51,7 @@ export function AboutSection() {
                   <h3 className="text-lg sm:text-xl font-bold text-foreground mb-2 sm:mb-3">
                     {siteContent.about.audience.title}
                   </h3>
-                  <p className="text-sm sm:text-base text-secondary-text leading-relaxed flex-1">
+                  <p className="text-sm sm:text-base text-secondary-text leading-relaxed flex-1 text-justify">
                     {siteContent.about.audience.description}
                   </p>
                 </div>
@@ -66,7 +66,7 @@ export function AboutSection() {
                   <h3 className="text-lg sm:text-xl font-bold text-foreground mb-2 sm:mb-3">
                     {siteContent.about.future.title}
                   </h3>
-                  <p className="text-sm sm:text-base text-secondary-text leading-relaxed flex-1">
+                  <p className="text-sm sm:text-base text-secondary-text leading-relaxed flex-1 text-justify">
                     {siteContent.about.future.description}
                   </p>
                 </div>
@@ -80,7 +80,7 @@ export function AboutSection() {
           <div className="w-full h-full relative min-h-[350px] lg:min-h-0 rounded-[24px] sm:rounded-[40px] overflow-hidden shadow-2xl border-[6px] sm:border-8 border-background group">
             <MotionWrapper variant="slideUp" delay={0.4} className="absolute inset-0 w-full h-full">
               <Image 
-                src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80" 
+                src="/objective/img1.png" 
                 alt="Startup team collaborating" 
                 fill 
                 className="object-cover group-hover:scale-105 transition-transform duration-1000"

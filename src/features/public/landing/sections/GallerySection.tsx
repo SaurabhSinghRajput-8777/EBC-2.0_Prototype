@@ -13,18 +13,22 @@ export function GallerySection() {
   const row2Images = images.slice(midPoint);
 
   return (
-    <section id="gallery" className="relative py-20 md:py-8 md:py-10 bg-surface overflow-hidden border-y border-primary/10 dark:border-white/5">
+    <section id="gallery" className="relative py-12 md:py-16 lg:py-12 bg-surface overflow-hidden border-y border-primary/10 dark:border-white/5">
       
       <Container className="relative z-10 mb-0 md:mb-2 flex flex-col items-center">
         <MotionWrapper variant="slideUp" className="flex flex-col items-center">
-          <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-background border border-primary/10 dark:border-white/10 text-foreground text-xs sm:text-sm font-bold tracking-widest uppercase shadow-sm mb-6">
+          <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-background border border-primary/10 dark:border-white/10 text-foreground text-xs sm:text-sm font-bold tracking-widest uppercase shadow-sm mb-3">
             <Camera className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-primary" />
             <span>The Gallery</span>
           </div>
           <SectionHeading
-            title={siteContent.glimpses.title}
+            title={
+              <>
+                Glimpses of EBC <span className="inline-block align-middle ml-2 px-4 py-1.5 sm:px-5 sm:py-2 bg-[#eade18] text-slate-900 rounded-lg sm:rounded-xl text-[0.7em] sm:text-[0.8em] font-sans font-black tracking-widest shadow-[0_8px_20px_rgba(234,222,24,0.4)] border border-[#eade18]/50 transform -translate-y-1 sm:-translate-y-2 -rotate-3">1.0</span>
+              </>
+            }
             subtitle={siteContent.glimpses.description}
-            titleClassName="text-foreground"
+            titleClassName="text-foreground !mb-2 md:!mb-3"
             className="!mb-0"
           />
         </MotionWrapper>

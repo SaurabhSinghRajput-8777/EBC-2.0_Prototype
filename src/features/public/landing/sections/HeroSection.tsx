@@ -7,11 +7,12 @@ import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
 import { siteContent } from "@/constants/siteContent";
-import { ArrowRight, Rocket, Calendar, Flag } from "lucide-react";
+import { ArrowRight, Rocket, Calendar, Flag, ChevronLeft, ChevronRight } from "lucide-react";
 
 import { TypewriterEffect } from "@/shared/animations/TypewriterEffect";
 
 const HERO_IMAGES = [
+  { src: "/hero/EBC%202.0.png", alt: "EBC 2.0 Banner" },
   { src: "/hero/WhatsApp%20Image%202026-07-08%20at%2010.31.54%20AM.jpeg", alt: "EBC Bootcamp Kickoff" },
   { src: "/hero/WhatsApp%20Image%202026-07-08%20at%2010.31.54%20AM%20(1).jpeg", alt: "Students collaborating" },
   { src: "/hero/WhatsApp%20Image%202026-07-08%20at%2010.31.54%20AM%20(2).jpeg", alt: "Mentorship session" },
@@ -29,9 +30,17 @@ export function HeroSection() {
     return () => clearInterval(timer);
   }, []);
 
+  const handleNext = () => {
+    setCurrentIndex((prev) => (prev + 1) % HERO_IMAGES.length);
+  };
+
+  const handlePrev = () => {
+    setCurrentIndex((prev) => (prev - 1 + HERO_IMAGES.length) % HERO_IMAGES.length);
+  };
+
   return (
     <>
-      <section className="relative min-h-[100dvh] w-full bg-surface dark:bg-transparent flex flex-col justify-center overflow-hidden">
+      <section className="relative min-h-[100dvh] w-full bg-surface dark:bg-transparent flex flex-col justify-center overflow-hidden pt-16 md:pt-20">
 
         {/* Animated Light Gradient Background (Fallback) */}
         <motion.div
@@ -55,17 +64,24 @@ export function HeroSection() {
           <source src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260302_085640_276ea93b-d7da-4418-a09b-2aa5b490e838.mp4" type="video/mp4" />
         </video>
 
-        <div className="max-w-[1440px] mx-auto w-full relative z-10 flex flex-col items-center">
+        {/* Video Fade & Blur Overlays (Bottom to Center) */}
+        <div
+          className="absolute inset-x-0 bottom-0 h-1/3 z-[1] pointer-events-none backdrop-blur-sm"
+          style={{ maskImage: "linear-gradient(to top, black 0%, transparent 100%)", WebkitMaskImage: "linear-gradient(to top, black 0%, transparent 100%)" }}
+        />
+        <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-surface/80 dark:from-background/80 to-transparent z-[1] pointer-events-none" />
+
+        <div className="max-w-[1440px] mx-auto w-full relative z-10 flex flex-col items-center -translate-y-[10px]">
 
           {/* Main Heading & Subheading (Centered Outside the Box) */}
-          <div className="text-center w-full max-w-5xl mx-auto">
+          <div className="text-center w-full max-w-6xl mx-auto px-4">
             <div className="flex flex-col items-center">
-              <h1 className="font-serif font-bold text-4xl sm:text-5xl md:text-6xl lg:text-[72px] leading-[1.1] md:leading-[1.1] tracking-tight text-foreground dark:text-white mb-4">
+              <h1 className="font-serif font-bold text-5xl sm:text-6xl md:text-7xl lg:text-[90px] leading-[1.1] md:leading-[1.1] tracking-tight text-foreground dark:text-white mb-2">
                 Entrepreneurship <span className="whitespace-nowrap">Bootcamp <span className="inline-block align-middle ml-2 px-3 py-1 sm:px-5 sm:py-2 bg-gradient-to-br from-accent to-red-700 text-white rounded-xl sm:rounded-[1.25rem] text-[0.55em] sm:text-[0.7em] font-sans font-black tracking-widest shadow-[0_8px_20px_rgba(220,38,38,0.4)] border border-white/25 transform -translate-y-1 sm:-translate-y-2 -rotate-3">2.0</span></span>
               </h1>
-              <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-foreground/80 dark:text-white font-medium flex flex-col sm:flex-row items-center justify-center mb-6 h-20 sm:h-12 md:h-14 lg:h-16">
-                <span className="font-body shrink-0 sm:mr-3">Build Your</span>
-                <span className="text-[#004A99] font-serif italic mt-2 sm:mt-0 whitespace-nowrap">
+              <div className="text-xl sm:text-3xl md:text-4xl lg:text-[44px] text-foreground/80 dark:text-white font-medium flex flex-col sm:flex-row items-center justify-center mb-5 min-h-[80px] sm:min-h-[56px] md:min-h-[64px] lg:min-h-[80px] w-full">
+                <span className="font-body shrink-0 sm:mr-3.5">Build Your</span>
+                <span className="text-yellow-500 dark:text-yellow-400 font-serif italic mt-1 sm:mt-0 whitespace-nowrap drop-shadow-sm">
                   <TypewriterEffect
                     words={[
                       "Unicorn Startup",
@@ -79,7 +95,7 @@ export function HeroSection() {
 
               <div className="flex flex-col sm:flex-row gap-4 w-[90%] sm:w-full justify-center max-w-sm sm:max-w-md mx-auto">
                 <Link href={siteContent.hero.secondaryCta.href} passHref className="w-full sm:w-auto">
-                  <Button size="lg" variant="outline" className="w-full border-primary/20 text-[#004A99] hover:bg-primary/5 bg-white/50 backdrop-blur-sm">
+                  <Button size="lg" variant="outline" className="w-full border-primary/20 text-black dark:text-white hover:bg-primary/5 bg-white/50 backdrop-blur-sm">
                     {siteContent.hero.secondaryCta.label}
                   </Button>
                 </Link>
@@ -125,7 +141,7 @@ export function HeroSection() {
                   <Rocket className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-accent" />
                   <span>Your Launchpad</span>
                 </div>
-                <p className="text-lg sm:text-xl md:text-2xl text-secondary-text font-medium mb-4 sm:mb-6 leading-relaxed tracking-tight">
+                <p className="text-lg sm:text-xl md:text-2xl text-secondary-text font-medium mb-4 sm:mb-6 leading-relaxed tracking-tight text-justify">
                   {siteContent.hero.subheading}
                 </p>
               </div>
@@ -157,7 +173,7 @@ export function HeroSection() {
             </div>
 
             {/* Video / Editorial Canvas Area (Right Side) */}
-            <div className="relative w-full lg:w-[55%] min-h-[240px] sm:min-h-[300px] lg:min-h-[400px] bg-background rounded-2xl lg:rounded-[36px] overflow-hidden order-1 lg:order-2 shadow-sm border-4 lg:border-[6px] border-surface dark:border-white/5 ring-1 ring-primary/5">
+            <div className="relative w-full lg:w-[55%] min-h-[240px] sm:min-h-[300px] lg:min-h-[400px] bg-background rounded-2xl lg:rounded-[36px] overflow-hidden order-1 lg:order-2 shadow-sm border-4 lg:border-[6px] border-surface dark:border-white/5 ring-1 ring-primary/5 group/slider">
               <AnimatePresence initial={false}>
                 <motion.div
                   key={currentIndex}
@@ -204,6 +220,26 @@ export function HeroSection() {
                     aria-label={`Go to slide ${index + 1}`}
                   />
                 ))}
+              </div>
+
+              {/* Navigation Arrows */}
+              <div className="absolute inset-y-0 left-0 z-30 flex items-center pl-2 sm:pl-4 opacity-0 group-hover/slider:opacity-100 transition-opacity duration-300">
+                <button
+                  onClick={handlePrev}
+                  className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-black/30 hover:bg-black/50 backdrop-blur-md flex items-center justify-center text-white border border-white/20 transition-colors"
+                  aria-label="Previous image"
+                >
+                  <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6" />
+                </button>
+              </div>
+              <div className="absolute inset-y-0 right-0 z-30 flex items-center pr-2 sm:pr-4 opacity-0 group-hover/slider:opacity-100 transition-opacity duration-300">
+                <button
+                  onClick={handleNext}
+                  className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-black/30 hover:bg-black/50 backdrop-blur-md flex items-center justify-center text-white border border-white/20 transition-colors"
+                  aria-label="Next image"
+                >
+                  <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6" />
+                </button>
               </div>
             </div>
 

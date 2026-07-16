@@ -63,7 +63,7 @@ export default function RootLayout({
       <body className="antialiased font-body transition-colors duration-300" suppressHydrationWarning>
         <ThemeProvider
           attribute="class"
-          defaultTheme="dark"
+          defaultTheme="light"
           enableSystem={false}
           disableTransitionOnChange
         >
