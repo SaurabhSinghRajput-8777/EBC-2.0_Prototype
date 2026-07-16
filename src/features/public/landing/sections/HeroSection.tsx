@@ -54,7 +54,7 @@ export function HeroSection() {
         />
 
         {/* Video Background */}
-        <video
+        <video preload="auto"
           autoPlay
           loop
           muted

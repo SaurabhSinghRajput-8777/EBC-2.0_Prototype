@@ -39,8 +39,7 @@ export function GallerySection() {
         <Marquee speed="slow" direction="left" className="py-2" showArrows={false}>
           {row1Images.map((src, index) => (
             <div key={index} className="relative w-[70vw] sm:w-[320px] md:w-[400px] h-[200px] sm:h-[240px] md:h-[280px] shrink-0 mx-2 sm:mx-3 md:mx-4 rounded-[20px] sm:rounded-[24px] overflow-hidden shadow-md border border-primary/10 dark:border-white/10 group cursor-grab active:cursor-grabbing">
-              <Image
-                src={src}
+              <Image priority                 src={src}
                 alt={`Glimpse ${index + 1}`}
                 fill
                 className="object-cover"
@@ -56,8 +55,7 @@ export function GallerySection() {
         <Marquee speed="slow" direction="right" className="py-2" showArrows={false}>
           {row2Images.map((src, index) => (
             <div key={index} className="relative w-[70vw] sm:w-[320px] md:w-[400px] h-[200px] sm:h-[240px] md:h-[280px] shrink-0 mx-2 sm:mx-3 md:mx-4 rounded-[20px] sm:rounded-[24px] overflow-hidden shadow-md border border-primary/10 dark:border-white/10 group cursor-grab active:cursor-grabbing">
-              <Image
-                src={src}
+              <Image priority                 src={src}
                 alt={`Glimpse Row 2 ${index + 1}`}
                 fill
                 className="object-cover"

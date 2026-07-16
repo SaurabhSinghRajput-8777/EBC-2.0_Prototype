@@ -42,8 +42,7 @@ export function StructureSection() {
 
                 {/* Image Container with Inner Padding */}
                 <div className="relative w-full h-40 sm:h-48 lg:h-40 rounded-[14px] sm:rounded-[18px] overflow-hidden z-10 mb-4 sm:mb-6">
-                  <Image
-                    src={item.image}
+                  <Image priority                     src={item.image}
                     alt={item.title}
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-700"

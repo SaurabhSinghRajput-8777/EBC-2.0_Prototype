@@ -42,8 +42,7 @@ export function WinnersSection() {
           {/* Top Row: Landscape Images (Swipeable on Mobile, Grid on Desktop) */}
           <div className="flex md:grid md:grid-cols-2 gap-4 sm:gap-6 overflow-x-auto snap-x snap-mandatory pb-4 md:pb-0 scrollbar-none -mx-4 px-4 md:mx-0 md:px-0">
             <MotionWrapper variant="slideRight" className="relative min-w-[85vw] md:min-w-0 w-full aspect-video rounded-[20px] md:rounded-[24px] overflow-hidden border border-primary/10 dark:border-white/10 shadow-md group snap-center shrink-0">
-              <Image
-                src={images[0] || ""}
+              <Image priority                 src={images[0] || ""}
                 alt="EBC 1.0 Winners 1"
                 fill
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
@@ -53,8 +52,7 @@ export function WinnersSection() {
             </MotionWrapper>
 
             <MotionWrapper variant="slideLeft" className="relative min-w-[85vw] md:min-w-0 w-full aspect-video rounded-[20px] md:rounded-[24px] overflow-hidden border border-primary/10 dark:border-white/10 shadow-md group snap-center shrink-0">
-              <Image
-                src={images[1] || ""}
+              <Image priority                 src={images[1] || ""}
                 alt="EBC 1.0 Winners 2"
                 fill
                 className="object-cover transition-transform duration-700 group-hover:scale-105"

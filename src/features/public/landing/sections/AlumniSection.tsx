@@ -22,8 +22,7 @@ function ImageSlideshow({ images, alt }: { images: string[], alt: string }) {
   return (
     <>
       {images.map((src, idx) => (
-        <Image
-          key={src}
+        <Image priority           key={src}
           src={src}
           alt={`${alt} photo ${idx + 1}`}
           fill

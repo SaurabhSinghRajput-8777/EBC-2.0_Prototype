@@ -12,7 +12,7 @@ function TeamCard({ name, position, description, image }: { name: string; positi
   return (
     <div className="group relative w-full h-[220px] sm:h-[240px] md:h-[280px] rounded-2xl overflow-hidden cursor-pointer border border-primary/10 dark:border-white/10 shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 bg-surface">
       {/* Background Image */}
-      <Image src={avatarUrl} alt={name} fill className="object-cover transition-transform duration-700 group-hover:scale-105" unoptimized />
+      <Image priority src={avatarUrl} alt={name} fill className="object-cover transition-transform duration-700 group-hover:scale-105" unoptimized />
       
       {/* Permanent Gradient Overlay for text readability (Dark to transparent) */}
       <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/20 to-transparent z-10 transition-opacity duration-500 group-hover:opacity-0" />

@@ -79,7 +79,7 @@ export function AboutSection() {
           {/* Right Side: Bento Image Canvas */}
           <div className="w-full h-full relative min-h-[350px] lg:min-h-0 rounded-[24px] sm:rounded-[40px] overflow-hidden shadow-2xl border-[6px] sm:border-8 border-background group">
             <MotionWrapper variant="slideUp" delay={0.4} className="absolute inset-0 w-full h-full">
-              <Image 
+              <Image priority 
                 src="/objective/img1.png" 
                 alt="Startup team collaborating" 
                 fill 

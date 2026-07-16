@@ -106,8 +106,7 @@ export function ScheduleSection() {
                     {/* Image Header */}
                     {siteContent.schedule.sessions[activeIndex]?.image && (
                       <div className="relative w-full h-40 sm:h-48 md:h-64 mb-6 md:mb-8 rounded-xl md:rounded-2xl overflow-hidden shrink-0 shadow-sm border border-primary/10">
-                        <Image
-                          src={siteContent.schedule.sessions[activeIndex].image}
+                        <Image priority                           src={siteContent.schedule.sessions[activeIndex].image}
                           alt={siteContent.schedule.sessions[activeIndex].title}
                           fill
                           className="object-cover"
