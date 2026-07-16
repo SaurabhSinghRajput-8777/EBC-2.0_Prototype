@@ -11,7 +11,7 @@ import { ArrowRight, Rocket, Calendar, Flag, ChevronLeft, ChevronRight } from "l
 import { TypewriterEffect } from "@/shared/animations/TypewriterEffect";
 
 const HERO_IMAGES = [
-  { src: "/hero/EBC%202.0.png", alt: "EBC 2.0 Banner" },
+  { src: "/hero/EBC 2.0.png", alt: "EBC 2.0 Banner" },
   { src: "/hero/WhatsApp%20Image%202026-07-08%20at%2010.31.54%20AM.jpeg", alt: "EBC Bootcamp Kickoff" },
   { src: "/hero/WhatsApp%20Image%202026-07-08%20at%2010.31.54%20AM%20(1).jpeg", alt: "Students collaborating" },
   { src: "/hero/WhatsApp%20Image%202026-07-08%20at%2010.31.54%20AM%20(2).jpeg", alt: "Mentorship session" },
