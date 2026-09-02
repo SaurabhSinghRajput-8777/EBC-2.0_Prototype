@@ -69,7 +69,7 @@ export const siteContent = {
       { id: 2, title: "Idea Clinic, Customer Discovery (TAM–SAM–SOM)", date: "25 Aug 2026", image: "/Bootcamp Schedule/image (7).jpg", description: "Structured validation of ideas through customer interviews, identifying target segments, and defining TAM, SAM and SOM." },
       { id: 3, title: "Market Sizing", date: "01 Sep 2026", image: "/Bootcamp Schedule/9Z5A9604.JPG", description: "Quantitative and qualitative assessment of market opportunity, demand estimation, competitive landscape analysis, and revenue potential forecasting." },
       { id: 4, title: "Cofounder & Team Development", date: "10 Sep 2026", image: "/Bootcamp Schedule/image.jpg", description: "Understanding founder roles, equity discussions, team dynamics, culture building, hiring strategy, and governance structures for early-stage startups." },
-      { id: 5, title: "Founder's Dating", date: "09 Sep 2026 – 11 Sep 2026", image: "/Bootcamp Schedule/image (1).jpg", description: "Finding a co-founder." },
+      { id: 5, title: "Founder's Dating", date: "11 Sep 2026 – 14 Sep 2026", image: "/Bootcamp Schedule/image (1).jpg", description: "Finding a co-founder." },
       { id: 6, title: "GTM Strategy", date: "15 Sep 2026", image: "/Bootcamp Schedule/image (2).jpg", description: "Designing go-to-market plans including customer acquisition channels, pricing strategy, positioning, partnerships, and launch roadmap." },
       { id: 7, title: "Business Models", date: "21 Sep 2026", image: "/Bootcamp Schedule/image (4).jpg", description: "Exploration of revenue models, unit economics, cost structures, value propositions, and scalability frameworks using Business Model Canvas." },
       { id: 8, title: "MVP", date: "25 Sep 2026", image: "/Bootcamp Schedule/image (5).jpg", description: "Developing a Minimum Viable Product to test core assumptions, gather user feedback, iterate quickly, and reduce product-market risk." },
@@ -162,17 +162,17 @@ export const siteContent = {
     title: "Guest Talks by Our Alumni",
     description: "Hear from Bennett University alumni who turned their ideas into thriving startups. Real stories, real impact.",
     talks: [
-      { 
-        name: "Aditya & Manas", 
+      {
+        name: "Aditya & Manas",
         startup: "Metabees",
         image: ["/guests/guest2.png", "/guests/guest4.jpg"],
-        content: "Metabees is building the browser infrastructure for AI agents, already trusted by 700+ organizations. The team has successfully raised a pre-seed round, turning a university project into a product used across industries." 
+        content: "Metabees is building the browser infrastructure for AI agents, already trusted by 700+ organizations. The team has successfully raised a pre-seed round, turning a university project into a product used across industries."
       },
-      { 
-        name: "Sankarsh Chanda", 
+      {
+        name: "Sankarsh Chanda",
         startup: "Savart & Stardour",
         image: ["/guests/guest1.jpeg", "/guests/guest3.jpeg"],
-        content: "Sankarsh Chanda is a published author who wrote Financial Nirvana at age 17. Beyond building Savart into a leading fintech platform, he is also the founder of Stardour Aerospace, a space exploration company focused on orbital transfer vehicles and deep space research." 
+        content: "Sankarsh Chanda is a published author who wrote Financial Nirvana at age 17. Beyond building Savart into a leading fintech platform, he is also the founder of Stardour Aerospace, a space exploration company focused on orbital transfer vehicles and deep space research."
       }
     ]
   },
