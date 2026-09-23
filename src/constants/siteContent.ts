@@ -72,10 +72,10 @@ export const siteContent = {
       { id: 5, title: "Founder's Dating", date: "11 Sep 2026 – 14 Sep 2026", image: "/Bootcamp Schedule/image (1).jpg", description: "Finding a co-founder." },
       { id: 6, title: "Business Models", date: "15 Sep 2026", image: "/Bootcamp Schedule/image (4).jpg", description: "Exploration of revenue models, unit economics, cost structures, value propositions, and scalability frameworks using Business Model Canvas." },
       { id: 7, title: "GTM Strategy", date: "21 Sep 2026", image: "/Bootcamp Schedule/image (2).jpg", description: "Designing go-to-market plans including customer acquisition channels, pricing strategy, positioning, partnerships, and launch roadmap." },
-      { id: 8, title: "MVP", date: "25 Sep 2026", image: "/Bootcamp Schedule/image (5).jpg", description: "Developing a Minimum Viable Product to test core assumptions, gather user feedback, iterate quickly, and reduce product-market risk." },
-      { id: 9, title: "Investor Mind, Startup Finance & Fundraising", date: "28 Sep 2026", image: "/Bootcamp Schedule/image (6).jpg", description: "Understanding investor expectations, startup valuation basics, financial projections, cap tables, funding stages, and fundraising strategy." },
-      { id: 10, title: "Investor Pitch Readiness", date: "30 Sep 2026", image: "/Bootcamp Schedule/9Z5A9588.JPG", description: "Live pitch simulations, investor Q&A preparation, feedback incorporation, and refining communication clarity and confidence." },
-      { id: 11, title: "Demo Day", date: "06 Oct 2026", image: "/Bootcamp Schedule/image (8).jpg", description: "Final showcase event where startups present validated business ideas to investors, mentors, and stakeholders for exposure and potential funding." }
+      { id: 8, title: "MVP", date: "28 Sep 2026", image: "/Bootcamp Schedule/image (5).jpg", description: "Developing a Minimum Viable Product to test core assumptions, gather user feedback, iterate quickly, and reduce product-market risk." },
+      { id: 9, title: "Investor Mind, Startup Finance & Fundraising", date: "05 Oct 2026", image: "/Bootcamp Schedule/image (6).jpg", description: "Understanding investor expectations, startup valuation basics, financial projections, cap tables, funding stages, and fundraising strategy." },
+      { id: 10, title: "Investor Pitch Readiness", date: "13 Oct 2026", image: "/Bootcamp Schedule/9Z5A9588.JPG", description: "Live pitch simulations, investor Q&A preparation, feedback incorporation, and refining communication clarity and confidence." },
+      { id: 11, title: "Demo Day", date: "23 – 24 Oct 2026", image: "/Bootcamp Schedule/image (8).jpg", description: "Final showcase event where startups present validated business ideas to investors, mentors, and stakeholders for exposure and potential funding." }
     ]
   },
   structure: {

@@ -164,7 +164,7 @@ export function HeroSection() {
                         <Flag className="w-4 h-4 text-[#004A99]/60" />
                         <span className="block text-xs font-bold text-secondary-text uppercase tracking-widest">Demo Day</span>
                       </div>
-                      <span className="block text-lg sm:text-xl font-bold text-foreground whitespace-nowrap">06 Oct 2026</span>
+                      <span className="block text-lg sm:text-xl font-bold text-foreground whitespace-nowrap">23 – 24 Oct 2026</span>
                     </div>
                   </div>
                 </div>
