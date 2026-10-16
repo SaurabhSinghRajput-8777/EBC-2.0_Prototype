@@ -67,7 +67,7 @@ export function DemoDayContent() {
           <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center">
             
             {/* Left Column: Clean Minimal Hero Headline & Action */}
-            <div className="lg:col-span-6 flex flex-col items-start">
+            <div className="order-2 lg:order-1 lg:col-span-6 flex flex-col items-start">
               {/* Main Heading */}
               <h1 className="font-serif font-black text-4xl sm:text-5xl lg:text-[56px] text-foreground tracking-tight leading-[1.08] mb-3">
                 Grand Demo Day
@@ -94,7 +94,7 @@ export function DemoDayContent() {
             </div>
 
             {/* Right Column: Framed Official Poster Banner (Significantly Increased Size) */}
-            <div className="lg:col-span-6 flex justify-center lg:justify-end w-full">
+            <div className="order-1 lg:order-2 lg:col-span-6 flex justify-center lg:justify-end w-full">
               <div className="relative w-full max-w-xl lg:max-w-none rounded-2xl sm:rounded-3xl p-2.5 sm:p-3 bg-gradient-to-b from-white/90 via-white/50 to-white/10 dark:from-white/20 dark:via-white/10 dark:to-transparent border border-white/70 dark:border-white/20 shadow-[0_28px_70px_rgba(0,0,0,0.2)] dark:shadow-[0_28px_80px_rgba(0,0,0,0.7)] backdrop-blur-2xl">
                 <div className="relative overflow-hidden rounded-xl sm:rounded-2xl bg-zinc-950 flex items-center justify-center shadow-inner">
                   <img
