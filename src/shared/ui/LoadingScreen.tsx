@@ -4,6 +4,12 @@ import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 
+declare global {
+  interface Window {
+    __appReady?: boolean;
+  }
+}
+
 export function LoadingScreen() {
   const [isLoading, setIsLoading] = useState(true);
 
@@ -14,6 +20,10 @@ export function LoadingScreen() {
     const timer = setTimeout(() => {
       setIsLoading(false);
       document.body.style.overflow = "unset";
+      if (typeof window !== "undefined") {
+        window.__appReady = true;
+        window.dispatchEvent(new Event("landing-page-ready"));
+      }
     }, 1800); // 1.8 seconds loading screen
 
     return () => {

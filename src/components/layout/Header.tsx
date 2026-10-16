@@ -6,7 +6,6 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { ChevronDown, Menu, X } from "lucide-react";
 import { cn } from "@/shared/lib/utils";
-import { requestDemoLinkStyles } from "@/shared/ui/Button";
 import { siteContent } from "@/constants/siteContent";
 import { ThemeToggle } from "@/components/ui/ThemeToggle";
 
@@ -92,15 +91,19 @@ export function Header() {
 
   const closeMenu = () => setIsMenuOpen(false);
 
-  return (
-    <header
-      className={cn(
-        "fixed inset-x-0 top-0 z-50 w-full transition-all duration-300",
-        isScrolled
-          ? "border-b border-primary/10 bg-background/82 shadow-[0_12px_34px_rgba(0,74,153,0.08)] backdrop-blur-xl"
-          : "border-b border-transparent bg-transparent"
-      )}
-    >
+    const isDemoDayPage = pathname === "/demoday";
+
+    return (
+      <header
+        className={cn(
+          "fixed inset-x-0 top-0 z-50 w-full transition-all duration-300",
+          isDemoDayPage
+            ? "border-b border-primary/10 bg-background shadow-[0_12px_34px_rgba(0,74,153,0.06)]"
+            : isScrolled
+            ? "border-b border-primary/10 bg-background/82 shadow-[0_12px_34px_rgba(0,74,153,0.08)] backdrop-blur-xl"
+            : "border-b border-transparent bg-transparent"
+        )}
+      >
       <div className="flex h-20 w-full items-center justify-between px-6 md:px-10 lg:px-16 xl:px-20">
         <Link
           href="/"
@@ -120,36 +123,72 @@ export function Header() {
           </span>
         </Link>
 
-        <nav className="hidden items-center gap-9 lg:flex" aria-label="Primary navigation">
+        <nav className="hidden items-center gap-9 lg:flex lg:absolute lg:left-1/2 lg:-translate-x-1/2" aria-label="Primary navigation">
           <Dropdown label="Bootcamp" href="/#bootcamp" links={siteContent.header.navigation.solutions} pathname={pathname} />
           <Dropdown label="About" href="/#about" links={siteContent.header.navigation.inside} pathname={pathname} />
           {siteContent.header.navigation.staticLinks.map((link) => {
             const isActive = pathname === link.href;
+            const isDemoDay = link.href === "/demoday";
 
             return (
-              <Link
-                key={link.href}
-                href={link.href}
-                className={cn(
-                  "py-2 font-heading text-[20px] font-semibold text-[#004A99] dark:text-white transition-colors hover:text-[#004A99] dark:hover:text-white hover:underline hover:decoration-accent hover:decoration-2 hover:underline-offset-8 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-4 focus-visible:ring-offset-background",
-                  isActive && "underline decoration-accent decoration-2 underline-offset-8"
+              <div key={link.href} className="relative inline-flex items-center">
+                <Link
+                  href={link.href}
+                  className={cn(
+                    "py-2 font-heading text-[20px] font-semibold text-[#004A99] dark:text-white transition-colors hover:text-[#004A99] dark:hover:text-white hover:underline hover:decoration-accent hover:decoration-2 hover:underline-offset-8 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-4 focus-visible:ring-offset-background",
+                    isActive && "underline decoration-accent decoration-2 underline-offset-8"
+                  )}
+                  aria-current={isActive ? "page" : undefined}
+                >
+                  {link.label}
+                </Link>
+
+                {/* Looped arrow pointing to Demo Day from the right + stylized date */}
+                {isDemoDay && (
+                  <div className="hidden xl:flex items-center absolute left-full ml-3 top-1/2 -translate-y-1/2 pointer-events-none select-none z-30">
+                    {/* Hand-drawn curly looped SVG arrow pointing left towards Demo Day, elongated length */}
+                    <svg
+                      width="68"
+                      height="34"
+                      viewBox="0 0 102 52"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="text-[#E63946] dark:text-[#FF4D5E] drop-shadow-sm shrink-0 translate-y-[2px]"
+                    >
+                      {/* Perfectly traced hand-drawn arrow with extended length */}
+                      <path
+                        d="M 94 18 C 80 13, 62 11, 51 18 C 41 25, 43 42, 55 43 C 67 44, 70 30, 57 24 C 44 19, 24 24, 7 25"
+                        stroke="currentColor"
+                        strokeWidth="3.2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                      {/* Symmetrical arrowhead: both ends make equal angles with the horizontal shaft */}
+                      <path
+                        d="M 21 14 L 7 25 L 21 36"
+                        stroke="currentColor"
+                        strokeWidth="3.2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+
+                    {/* Stylized Date */}
+                    <div className="flex items-center ml-0.5">
+                      <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white dark:bg-zinc-900 border border-[#E63946]/40 dark:border-[#FF4D5E]/40 text-[#C8102E] dark:text-[#FF4D5E] text-sm font-bold tracking-wide shadow-sm whitespace-nowrap">
+                        <span className="w-2 h-2 rounded-full bg-[#E63946] animate-pulse"></span>
+                        23rd Oct
+                      </span>
+                    </div>
+                  </div>
                 )}
-                aria-current={isActive ? "page" : undefined}
-              >
-                {link.label}
-              </Link>
+              </div>
             );
           })}
         </nav>
 
         <div className="hidden items-center gap-4 lg:flex">
           <ThemeToggle />
-          <Link
-            href={siteContent.header.cta.href}
-            className={requestDemoLinkStyles}
-          >
-            {siteContent.header.cta.label}
-          </Link>
         </div>
 
         <button
@@ -214,14 +253,6 @@ export function Header() {
               <span className="font-heading font-semibold text-[#004A99] dark:text-white">Theme</span>
               <ThemeToggle />
             </div>
-
-            <Link
-              href={siteContent.header.cta.href}
-              onClick={closeMenu}
-              className={cn(requestDemoLinkStyles, "mt-2 w-full px-6")}
-            >
-              {siteContent.header.cta.label}
-            </Link>
           </div>
         </nav>
       </div>

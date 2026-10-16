@@ -21,8 +21,8 @@ export const siteContent = {
       ],
     },
     cta: {
-      label: "Apply Now",
-      href: process.env.NEXT_PUBLIC_APPLY_NOW_LINK || "/apply",
+      label: "View Demo Day Finalists",
+      href: "/demoday",
     },
   },
   hero: {
@@ -30,8 +30,8 @@ export const siteContent = {
     headlineMain: "Entrepreneurship Bootcamp 2.0",
     subheading: "An 8-week intensive bootcamp by CIE where you learn from industry experts, validate your idea, and compete for a spot in the Bennett Hatchery. Whether you have a rough concept or ongoing research, this is where you start building.",
     primaryCta: {
-      label: "Apply Now",
-      href: process.env.NEXT_PUBLIC_APPLY_NOW_LINK || "/apply"
+      label: "View Demo Day Finalists",
+      href: "/demoday"
     },
     secondaryCta: {
       label: "View Schedule",

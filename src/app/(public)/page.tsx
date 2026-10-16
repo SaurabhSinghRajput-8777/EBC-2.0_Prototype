@@ -19,6 +19,8 @@ export const metadata = generateSeoMetadata({
   path: "/"
 });
 
+import { DemoDayPopup } from "@/components/layout/DemoDayPopup";
+
 export default function Home() {
   return (
     <PublicLayout>
@@ -26,6 +28,7 @@ export default function Home() {
         type="application/ld+json" 
         dangerouslySetInnerHTML={{ __html: JSON.stringify([organizationSchema, medicalSchema]) }} 
       />
+      <DemoDayPopup />
       <HeroSection />
       <AboutSection />
       <DatesSection />

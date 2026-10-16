@@ -92,16 +92,16 @@ export function HeroSection() {
                 </span>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-4 w-[90%] sm:w-full justify-center max-w-sm sm:max-w-md mx-auto">
-                <Link href={siteContent.hero.secondaryCta.href} passHref className="w-full sm:w-auto">
-                  <Button size="lg" variant="outline" className="w-full border-primary/20 text-black dark:text-white hover:bg-primary/5 bg-white/50 backdrop-blur-sm">
+              <div className="flex flex-col sm:flex-row gap-4 w-full justify-center max-w-xl mx-auto px-4">
+                <Link href={siteContent.hero.secondaryCta.href} passHref className="w-full sm:w-auto shrink-0">
+                  <Button size="lg" variant="outline" className="w-full sm:w-auto px-8 whitespace-nowrap border-primary/20 text-black dark:text-white hover:bg-primary/5 bg-white/50 backdrop-blur-sm">
                     {siteContent.hero.secondaryCta.label}
                   </Button>
                 </Link>
-                <Link href={siteContent.hero.primaryCta.href} passHref className="w-full sm:w-auto">
-                  <Button size="lg" className="w-full bg-[#C8102E] hover:bg-[#E63946] text-white border-transparent shadow-lg shadow-[#C8102E]/20">
+                <Link href={siteContent.hero.primaryCta.href} passHref className="w-full sm:w-auto shrink-0">
+                  <Button size="lg" className="w-full sm:w-auto px-8 whitespace-nowrap bg-[#C8102E] hover:bg-[#E63946] text-white border-transparent shadow-lg shadow-[#C8102E]/20">
                     {siteContent.hero.primaryCta.label}
-                    <ArrowRight className="ml-2 h-4 w-4" />
+                    <ArrowRight className="ml-2 h-4 w-4 shrink-0" />
                   </Button>
                 </Link>
               </div>
