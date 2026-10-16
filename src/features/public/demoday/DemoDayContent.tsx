@@ -203,7 +203,7 @@ export function DemoDayContent() {
                       </div>
 
                       {/* Startup Name */}
-                      <div className="mb-4">
+                      <div className="mb-2">
                         <h3 className={`font-heading font-bold text-xl sm:text-2xl tracking-tight line-clamp-1 transition-colors ${
                           isComingSoon 
                             ? "text-foreground/90 italic group-hover:text-amber-600" 
@@ -211,7 +211,21 @@ export function DemoDayContent() {
                         }`}>
                           {team.startupName}
                         </h3>
+                        {team.category && !isComingSoon && (
+                          <span className="inline-block mt-1 text-[11px] font-semibold uppercase tracking-wider text-primary/80 dark:text-primary-hover/90">
+                            {team.category}
+                          </span>
+                        )}
                       </div>
+
+                      {/* Description with internal scroll for full content readability */}
+                      {team.description && (
+                        <div className="h-28 overflow-y-auto pr-2 mb-4 custom-scrollbar">
+                          <p className="text-secondary-text text-xs sm:text-[13px] leading-relaxed select-text">
+                            {team.description}
+                          </p>
+                        </div>
+                      )}
                     </div>
 
                     {/* Bottom Founder Footer */}
