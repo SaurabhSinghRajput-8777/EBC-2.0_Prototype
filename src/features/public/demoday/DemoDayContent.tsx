@@ -221,7 +221,7 @@ export function DemoDayContent() {
                       {/* Description with internal scroll for full content readability */}
                       {team.description && (
                         <div className="h-28 overflow-y-auto pr-2 mb-4 custom-scrollbar">
-                          <p className="text-secondary-text text-xs sm:text-[13px] leading-relaxed select-text">
+                          <p className="text-secondary-text text-xs sm:text-[13px] leading-relaxed select-text text-justify">
                             {team.description}
                           </p>
                         </div>
